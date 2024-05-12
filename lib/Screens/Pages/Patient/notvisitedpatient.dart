@@ -76,7 +76,7 @@ class _notvisitedState extends State<notvisited> {
               Navigator.pop(context);
             }),
         title: Text(
-          'Pending Patients',
+          'Pending Elderlys',
           style: TextStyle(
             color: Colors.white,
             fontSize: 20,
@@ -169,7 +169,6 @@ class _notvisitedState extends State<notvisited> {
                                                   ),
                                                 ) // child widget, replace with your own
                                                 ),
-
                                             Container(
                                                 width: double.infinity,
                                                 decoration: BoxDecoration(),
@@ -192,38 +191,37 @@ class _notvisitedState extends State<notvisited> {
                                                 decoration: BoxDecoration(),
                                                 child: Padding(
                                                   padding:
-                                                  const EdgeInsets.only(
-                                                      left: 8.0, top: 4),
+                                                      const EdgeInsets.only(
+                                                          left: 8.0, top: 4),
                                                   child: Text(
                                                     "Status : Pending",
                                                     style: TextStyle(
                                                         color: Colors.black87,
                                                         fontSize: 14,
                                                         fontWeight:
-                                                        FontWeight.w500),
+                                                            FontWeight.w500),
                                                   ),
                                                 ) // child widget, replace with your own
-                                            ),
+                                                ),
                                             Container(
                                                 width: double.infinity,
                                                 decoration: BoxDecoration(),
                                                 child: Padding(
                                                   padding:
-                                                  const EdgeInsets.only(
-                                                      left: 8.0, top: 4),
+                                                      const EdgeInsets.only(
+                                                          left: 8.0, top: 4),
                                                   child: Text(
                                                     "Payment : Success",
                                                     style: TextStyle(
                                                         color: Colors.black87,
                                                         fontSize: 14,
                                                         fontWeight:
-                                                        FontWeight.w500),
+                                                            FontWeight.w500),
                                                   ),
                                                 ) // child widget, replace with your own
-                                            ),
+                                                ),
                                           ],
                                         ),
-
                                         Positioned(
                                           top: 8,
                                           right: 10,
@@ -327,7 +325,7 @@ class alertdialog extends StatelessWidget {
         alignment: Alignment.topCenter,
         children: [
           Container(
-            height: MediaQuery.of(context).size.height * 0.32,
+            height: MediaQuery.of(context).size.height * 0.33,
             child: Padding(
               padding: const EdgeInsets.fromLTRB(10, 70, 10, 10),
               child: Column(
@@ -432,7 +430,7 @@ class confirm extends StatelessWidget {
         alignment: Alignment.topCenter,
         children: [
           Container(
-            height: MediaQuery.of(context).size.height * 0.32,
+            height: MediaQuery.of(context).size.height * 0.33,
             child: Padding(
               padding: const EdgeInsets.fromLTRB(10, 70, 10, 10),
               child: Column(

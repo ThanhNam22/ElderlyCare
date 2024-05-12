@@ -81,6 +81,7 @@ class _DocDrawerState extends State<DocDrawer> {
                     padding: const EdgeInsets.only(left: 25.0),
                     child: Text(
                       'Verified Doctor',
+                      // ignore: deprecated_member_use
                       textScaleFactor: 1.5,
                       style: TextStyle(
                         fontWeight: FontWeight.w300,
@@ -88,14 +89,23 @@ class _DocDrawerState extends State<DocDrawer> {
                     ),
                   ),
                   trailing: Switch(
-                      activeColor: Colors.green,
-                      inactiveThumbColor: Colors.grey,
-                      value: loggedInUser.valid,
-                      onChanged: (check) {
-                        setState(() {
-                          loggedInUser.valid == check;
-                        });
-                      }),
+                    activeColor: Colors.green,
+                    inactiveThumbColor: Colors.grey,
+                    value: loggedInUser.valid,
+                    onChanged: (newValue) {
+                      // Cập nhật giá trị của loggedInUser.valid
+                      setState(() {
+                        loggedInUser.valid = newValue;
+                      });
+                      // Cập nhật trạng thái trong Firestore
+                      FirebaseFirestore.instance
+                          .collection('doctor')
+                          .doc(user!.uid)
+                          .update({
+                        'valid': newValue,
+                      });
+                    },
+                  ),
                 ),
                 Container(
                   height: 1,
@@ -107,6 +117,7 @@ class _DocDrawerState extends State<DocDrawer> {
                     padding: const EdgeInsets.only(left: 25.0),
                     child: Text(
                       'Available',
+                      // ignore: deprecated_member_use
                       textScaleFactor: 1.5,
                       style: TextStyle(
                         fontWeight: FontWeight.w300,
@@ -144,8 +155,7 @@ class _DocDrawerState extends State<DocDrawer> {
                 }),
                 // Privacy Policy
                 CustomList(Icons.announcement, "Privacy Policy", () async {
-                  final Uri _url = Uri.parse(
-                      'https://nik-jordan-privacy-policy.blogspot.com/2021/08/privacy-policy.html');
+                  final Uri _url = Uri.parse('');
                   if (!await launchUrl(_url)) {
                     throw 'Could not launch ';
                   }

@@ -116,7 +116,7 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: Padding(
           padding: const EdgeInsets.only(left: 78),
-          child: Text("HealthCare"),
+          child: Text("ElderlyCare"),
         ),
         iconTheme: IconThemeData(color: Colors.white),
       ),
@@ -137,7 +137,11 @@ class _HomePageState extends State<HomePage> {
                     alignment: Alignment.centerLeft,
                     padding: EdgeInsets.only(left: 20, bottom: 10),
                     child: Text(
-                      "Hello " + loggedInUser.name.toString() + " " + _message,
+                      "Xin Chào " +
+                          loggedInUser.name.toString() +
+                          " " +
+                          _message +
+                          "!",
                       style: TextStyle(
                         fontSize: 18,
                         color: kPrimaryColor,
@@ -580,7 +584,7 @@ class _HomePageState extends State<HomePage> {
                   shrinkWrap: true,
                   physics: NeverScrollableScrollPhysics(),
                   scrollDirection: Axis.vertical,
-                  itemCount:5,
+                  itemCount: 8,
                   itemBuilder: (BuildContext context, int index) {
                     final DocumentSnapshot doc = snapshot.data!.docs[index];
                     return TrdCell(

@@ -93,7 +93,7 @@ class _PendingState extends State<Pending> {
                                     padding: const EdgeInsets.symmetric(
                                         horizontal: 8, vertical: 6),
                                     child: Container(
-                                      height: 122,
+                                      height: 150,
                                       child: Card(
                                         shape: RoundedRectangleBorder(
                                           borderRadius: BorderRadius.all(
@@ -116,7 +116,7 @@ class _PendingState extends State<Pending> {
                                                       child: Padding(
                                                         padding:
                                                             const EdgeInsets
-                                                                    .only(
+                                                                .only(
                                                                 left: 8.0,
                                                                 top: 8.0),
                                                         child: Text(
@@ -144,7 +144,7 @@ class _PendingState extends State<Pending> {
                                                       child: Padding(
                                                         padding:
                                                             const EdgeInsets
-                                                                    .only(
+                                                                .only(
                                                                 left: 8.0),
                                                         child: Text(
                                                           "Date: " +
@@ -169,7 +169,7 @@ class _PendingState extends State<Pending> {
                                                       child: Padding(
                                                         padding:
                                                             const EdgeInsets
-                                                                    .only(
+                                                                .only(
                                                                 left: 8.0),
                                                         child: Text(
                                                           "Time: " +
@@ -194,7 +194,7 @@ class _PendingState extends State<Pending> {
                                                       child: Padding(
                                                         padding:
                                                             const EdgeInsets
-                                                                    .only(
+                                                                .only(
                                                                 left: 8.0),
                                                         child: Text(
                                                           "Status: Pending",
@@ -218,7 +218,7 @@ class _PendingState extends State<Pending> {
                                                       child: Padding(
                                                         padding:
                                                             const EdgeInsets
-                                                                    .only(
+                                                                .only(
                                                                 left: 8.0),
                                                         child: Text(
                                                           "Payment: Success",
@@ -307,7 +307,7 @@ class alertdialog extends StatelessWidget {
         alignment: Alignment.topCenter,
         children: [
           Container(
-            height: MediaQuery.of(context).size.height * 0.32,
+            height: MediaQuery.of(context).size.height * 0.33,
             child: Padding(
               padding: const EdgeInsets.fromLTRB(10, 70, 10, 10),
               child: Column(

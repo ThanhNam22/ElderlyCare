@@ -10,9 +10,9 @@ class about extends StatefulWidget {
 class _aboutState extends State<about> {
   final Uri emailLaunchUri = Uri(
     scheme: 'mailto',
-    path: 'dishangkumarrana@gmail.com,kevinprajapati2112@gmail.com,harshivrana01@gmail.com',
+    path: 'thanhnamd67@gmail.com',
     query: encodeQueryParameters(<String, String>{
-      'subject': 'Facing issues in HealthCare',
+      'subject': 'Facing issues in ElderlyCare',
     }),
   );
 
@@ -59,7 +59,7 @@ class _aboutState extends State<about> {
                     Padding(
                       padding: const EdgeInsets.only(top: 10.0),
                       child: Text(
-                        ' HealthCare',
+                        ' ElderlyCare',
                         style: TextStyle(
                             color: Colors.black87,
                             fontSize: 17,
@@ -72,7 +72,7 @@ class _aboutState extends State<about> {
                     Padding(
                       padding: const EdgeInsets.all(5.0),
                       child: Text(
-                        "\t\t\t\tHealthCare app is both side application i.e. doctor side and patient side. It's user-friendly app that allow patient to book their appoinment with their choice doctor.\n\n\t\t\t\tAt Doctor side doctor can easilt see their latest appoinment and confirm accordingly their busy schedule.",
+                        "\t\t\t\tElderlyCare app is both side application i.e. doctor side and patient side. It's user-friendly app that allow patient to book their appoinment with their choice doctor.\n\n\t\t\t\tAt Doctor side doctor can easilt see their latest appoinment and confirm accordingly their busy schedule.",
                         textAlign: TextAlign.left,
                         style: TextStyle(
                           color: Colors.black54,
@@ -110,7 +110,7 @@ class _aboutState extends State<about> {
                     Padding(
                       padding: const EdgeInsets.all(5.0),
                       child: Text(
-                        "\t\t\t\tThe development team has used the latest technology and tools to ensure that the HealthCare app is secure, reliable, and easy to use. They have also incorporated  user feedback into the development process, ensuring that the app meets the needs of doctors and patient alike.",
+                        "\t\t\t\tThe development team has used the latest technology and tools to ensure that the ElderlyCare app is secure, reliable, and easy to use. They have also incorporated  user feedback into the development process, ensuring that the app meets the needs of doctors and patient alike.",
                         textAlign: TextAlign.left,
                         style: TextStyle(
                           color: Colors.black54,
@@ -152,7 +152,7 @@ class _aboutState extends State<about> {
               padding: const EdgeInsets.only(bottom: 5.0),
               child: Center(
                   child: Text(
-                "© 2023 Rana Corporation, Inc.",
+                "© 2024 Duong Thanh Nam.",
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.w400),
               )),
             ),

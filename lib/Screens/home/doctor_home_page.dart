@@ -107,7 +107,7 @@ class _DocHomePageState extends State<DocHomePage> {
       appBar: AppBar(
         title: Padding(
           padding: const EdgeInsets.only(left: 78),
-          child: Text("HealthCare"),
+          child: Text("ElderlyCare"),
         ),
         iconTheme: IconThemeData(color: Colors.white),
       ),
@@ -268,7 +268,7 @@ class _DocHomePageState extends State<DocHomePage> {
                                                           child: Padding(
                                                             padding:
                                                                 const EdgeInsets
-                                                                        .only(
+                                                                    .only(
                                                                     left: 8.0,
                                                                     top: 8.0),
                                                             child: Text(
@@ -295,7 +295,7 @@ class _DocHomePageState extends State<DocHomePage> {
                                                           child: Padding(
                                                             padding:
                                                                 const EdgeInsets
-                                                                        .only(
+                                                                    .only(
                                                                     left: 8.0),
                                                             child: Text(
                                                               "Date: " +
@@ -318,7 +318,7 @@ class _DocHomePageState extends State<DocHomePage> {
                                                           child: Padding(
                                                             padding:
                                                                 const EdgeInsets
-                                                                        .only(
+                                                                    .only(
                                                                     left: 8.0,
                                                                     top: 4),
                                                             child: Text(
@@ -342,7 +342,7 @@ class _DocHomePageState extends State<DocHomePage> {
                                                           child: Padding(
                                                             padding:
                                                                 const EdgeInsets
-                                                                        .only(
+                                                                    .only(
                                                                     left: 8.0,
                                                                     top: 4),
                                                             child: Text(
@@ -365,7 +365,7 @@ class _DocHomePageState extends State<DocHomePage> {
                                                           child: Padding(
                                                             padding:
                                                                 const EdgeInsets
-                                                                        .only(
+                                                                    .only(
                                                                     left: 8.0,
                                                                     top: 4),
                                                             child: Text(
@@ -388,7 +388,7 @@ class _DocHomePageState extends State<DocHomePage> {
                                                           child: Padding(
                                                             padding:
                                                                 const EdgeInsets
-                                                                        .only(
+                                                                    .only(
                                                                     left: 8.0,
                                                                     top: 4),
                                                             child: Text(
@@ -438,7 +438,7 @@ class _DocHomePageState extends State<DocHomePage> {
                                                         child: Padding(
                                                           padding:
                                                               const EdgeInsets
-                                                                      .only(
+                                                                  .only(
                                                                   top: 10.0,
                                                                   bottom: 10),
                                                           child: Text(
@@ -486,7 +486,7 @@ class _DocHomePageState extends State<DocHomePage> {
                                                         child: Padding(
                                                           padding:
                                                               const EdgeInsets
-                                                                      .only(
+                                                                  .only(
                                                                   top: 10.0,
                                                                   bottom: 10),
                                                           child: Text(
@@ -533,7 +533,7 @@ class alertdialog extends StatelessWidget {
         alignment: Alignment.topCenter,
         children: [
           Container(
-            height: MediaQuery.of(context).size.height * 0.32,
+            height: MediaQuery.of(context).size.height * 0.33,
             child: Padding(
               padding: const EdgeInsets.fromLTRB(10, 70, 10, 10),
               child: Column(
@@ -638,7 +638,7 @@ class confirm extends StatelessWidget {
         alignment: Alignment.topCenter,
         children: [
           Container(
-            height: MediaQuery.of(context).size.height * 0.32,
+            height: MediaQuery.of(context).size.height * 0.33,
             child: Padding(
               padding: const EdgeInsets.fromLTRB(10, 70, 10, 10),
               child: Column(

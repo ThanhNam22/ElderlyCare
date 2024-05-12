@@ -566,7 +566,7 @@ class _Profile_pageState extends State<Profile_page> {
                                 dropdownTextStyle: TextStyle(fontSize: 16),
                                 dropdownIcon: Icon(Icons.arrow_drop_down,
                                     color: kPrimaryColor),
-                                initialCountryCode: 'IN',
+                                initialCountryCode: 'VN',
                                 onChanged: (phone) {
                                   print(phone.completeNumber);
                                   phoneController =

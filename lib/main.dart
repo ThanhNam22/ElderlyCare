@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
-        title: 'HealthCare',
+        title: 'ElderlyCare',
         theme: ThemeData(
             primarySwatch: Colors.indigo,
             appBarTheme: AppBarTheme(color: kPrimaryColor)),

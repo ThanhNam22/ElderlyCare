@@ -860,7 +860,7 @@ class AdvanceCustomAlert extends StatelessWidget {
           alignment: Alignment.topCenter,
           children: [
             Container(
-              height: 280,
+              height: 300,
               child: Padding(
                 padding: const EdgeInsets.fromLTRB(10, 120, 10, 10),
                 child: Column(

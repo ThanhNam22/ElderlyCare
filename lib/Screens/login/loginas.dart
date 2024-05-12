@@ -166,7 +166,7 @@ class _LoginasState extends State<Loginas> {
                             height: 50.0,
                             child: ElevatedButton(
                               child: Text(
-                                "Patient",
+                                "Elderly",
                                 style: TextStyle(
                                   color: Colors.white,
                                   fontSize: 18.0,

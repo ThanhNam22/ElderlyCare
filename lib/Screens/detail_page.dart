@@ -406,7 +406,7 @@ class _DetailPageState extends State<DetailPage> {
                                                       )),
                                                   Row(
                                                       children: new List
-                                                              .generate(
+                                                          .generate(
                                                           5,
                                                           (index) => buildStar(
                                                               context,
@@ -582,7 +582,7 @@ class _DetailPageState extends State<DetailPage> {
                             children: [
                               DetailCell(
                                   title: patient_count.toString(),
-                                  subTitle: 'Patients'),
+                                  subTitle: 'Elderlys'),
                               DetailCell(
                                   title: widget.experience + '+',
                                   subTitle: 'Exp. Years'),

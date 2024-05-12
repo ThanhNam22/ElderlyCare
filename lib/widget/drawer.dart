@@ -88,8 +88,7 @@ class _MyDrawerState extends State<MyDrawer> {
                 }),
                 // Privacy Policy
                 CustomList(Icons.announcement, "Privacy Policy", () async {
-                  final Uri _url = Uri.parse(
-                      'https://nik-jordan-privacy-policy.blogspot.com/2021/08/privacy-policy.html');
+                  final Uri _url = Uri.parse('');
                   if (!await launchUrl(_url)) {
                     throw 'Could not launch ';
                   }

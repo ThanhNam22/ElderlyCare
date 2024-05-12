@@ -159,7 +159,7 @@ class _RegistrationState extends State<Registration> {
                         child: Container(
                           child: Center(
                               child: Text(
-                            "Patient Registration",
+                            "User Registration",
                             style: TextStyle(
                                 fontSize: 32,
                                 color: Colors.black,

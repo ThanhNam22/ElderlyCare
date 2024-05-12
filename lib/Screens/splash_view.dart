@@ -61,7 +61,7 @@ class SplashViewState extends State<SplashView> {
                   width: 250, height: 250),
             ),
             Text(
-              "HealthCare",
+              "ElderlyCare",
               style: TextStyle(
                 fontSize: 31,
                 color: kPrimaryColor,
@@ -74,7 +74,7 @@ class SplashViewState extends State<SplashView> {
             Padding(
               padding: const EdgeInsets.only(bottom: 2),
               child: Text(
-                "Powered By Rana Corporation®",
+                "Powered By Duong Thanh Nam®",
                 style: TextStyle(
                     fontSize: 16,
                     color: kPrimaryColor,

@@ -274,7 +274,7 @@ class _visitedState extends State<visited> {
                                                               child: Padding(
                                                                 padding:
                                                                     const EdgeInsets
-                                                                            .only(
+                                                                        .only(
                                                                         left:
                                                                             8.0,
                                                                         top:
@@ -304,7 +304,7 @@ class _visitedState extends State<visited> {
                                                               child: Padding(
                                                                 padding:
                                                                     const EdgeInsets
-                                                                            .only(
+                                                                        .only(
                                                                         left:
                                                                             8.0),
                                                                 child: Text(
@@ -330,7 +330,7 @@ class _visitedState extends State<visited> {
                                                               child: Padding(
                                                                 padding:
                                                                     const EdgeInsets
-                                                                            .only(
+                                                                        .only(
                                                                         left:
                                                                             8.0),
                                                                 child: Text(
@@ -356,7 +356,7 @@ class _visitedState extends State<visited> {
                                                               child: Padding(
                                                                 padding:
                                                                     const EdgeInsets
-                                                                            .only(
+                                                                        .only(
                                                                         left:
                                                                             8.0),
                                                                 child: Text(
