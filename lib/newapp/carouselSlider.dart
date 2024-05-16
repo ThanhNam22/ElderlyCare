@@ -44,11 +44,14 @@ class Carouselslider extends StatelessWidget {
                   }));
                 }
                 if (index == 2) {
-                 Navigator.push(context, MaterialPageRoute(builder: (context)=>lab()));
+                  Fluttertoast.showToast(
+                      msg: "Insurance Coming Soon...",
+                      textColor: Colors.white,
+                      backgroundColor: kPrimaryColor);
                 }
                 if (index == 3) {
                   Fluttertoast.showToast(
-                      msg: "Insurance Coming Soon...",
+                      msg: "Pathology Laboratory Coming Soon...",
                       textColor: Colors.white,
                       backgroundColor: kPrimaryColor);
                 }

@@ -126,7 +126,7 @@ class _doctor_pageState extends State<doctor_page> {
                           Container(
                             child: Center(
                                 child: Text(
-                              "Doctor Login",
+                              "Đăng Nhập Bác Sĩ",
                               style: TextStyle(
                                   fontSize: 22,
                                   color: Colors.black,
@@ -156,7 +156,7 @@ class _doctor_pageState extends State<doctor_page> {
                               keyboardType: TextInputType.emailAddress,
                               cursorColor: kPrimaryColor,
                               decoration: buildInputDecoration(
-                                  Icons.email, "Your Email "),
+                                  Icons.email, "Email của bạn "),
                               onChanged: (email) {
                                 t_email = email.trim();
                               },
@@ -164,7 +164,7 @@ class _doctor_pageState extends State<doctor_page> {
                                 if (isEmailValid(email!))
                                   return null;
                                 else
-                                  return 'Enter a valid email address';
+                                  return 'Nhập địa chỉ email hợp lệ';
                               },
                               onSaved: (var email) {
                                 t_email = email.toString().trim();
@@ -228,7 +228,7 @@ class _doctor_pageState extends State<doctor_page> {
                                   hintText: "Password"),
                               validator: (var value) {
                                 if (value!.isEmpty) {
-                                  return "Enter Your Password";
+                                  return "Nhập mật khẩu của bạn";
                                 }
                                 return null;
                               },
@@ -276,43 +276,43 @@ class _doctor_pageState extends State<doctor_page> {
                                           switch (error.code) {
                                             case "invalid-email":
                                               errorMessage =
-                                                  "Your email address appears to be malformed.";
+                                                  "Địa chỉ email của bạn dường như không đúng định dạng.";
                                               break;
                                             case "wrong-password":
                                               errorMessage =
-                                                  "Your password is wrong.";
+                                                  "Mật khẩu của bạn sai.";
                                               break;
                                             case "user-not-found":
                                               errorMessage =
-                                                  "Doctor with this email doesn't exist.";
+                                                  "Bác sĩ với email này không tồn tại.";
                                               break;
                                             case "user-disabled":
                                               errorMessage =
-                                                  "User with this email has been disabled.";
+                                                  "Người dùng có email này đã bị vô hiệu hóa.";
                                               break;
                                             case "too-many-requests":
                                               errorMessage =
-                                                  "Too many requests";
+                                                  "Quá nhiều yêu cầu";
                                               break;
                                             case "operation-not-allowed":
                                               errorMessage =
-                                                  "Signing in with Email and Password is not enabled.";
+                                                  "Đăng nhập bằng Email và Mật khẩu không được kích hoạt.";
                                               break;
                                             case "email-already-in-use":
                                               {
                                                 errorMessage =
-                                                    "email already in use";
+                                                    "Email đã được sử dụng";
                                                 break;
                                               }
                                             default:
                                               errorMessage =
-                                                  "An undefined Error happened.";
+                                                  "Đã xảy ra lỗi không xác định.";
                                               break;
                                           }
                                           Fluttertoast.showToast(
                                               msg: errorMessage);
                                           if (errorMessage ==
-                                              "Doctor with this email doesn't exist.") {
+                                              "Email này không tồn tại.") {
                                             Navigator.pushReplacement(
                                                 context,
                                                 MaterialPageRoute(
@@ -340,7 +340,8 @@ class _doctor_pageState extends State<doctor_page> {
                                               .then((uid) => {
                                                     print("Login Successful"),
                                                     Fluttertoast.showToast(
-                                                        msg: "Login Successful",
+                                                        msg:
+                                                            "Đăng nhập thành công",
                                                         toastLength:
                                                             Toast.LENGTH_SHORT,
                                                         gravity:
@@ -368,7 +369,7 @@ class _doctor_pageState extends State<doctor_page> {
                                     }
                                   },
                                   child: Text(
-                                    'Login',
+                                    'Đăng nhập',
                                     style: TextStyle(
                                         color: Colors.white,
                                         fontSize: 18,
@@ -394,7 +395,7 @@ class _doctor_pageState extends State<doctor_page> {
                                   }
                                 },
                                 child: Text(
-                                  "Forget Password ?",
+                                  "Quên mật khẩu ?",
                                   style: TextStyle(
                                       color: kPrimaryColor,
                                       fontSize: 14,
@@ -425,7 +426,7 @@ class _doctor_pageState extends State<doctor_page> {
                                     children: [
                                       Center(
                                         child: Text(
-                                          "Don't have an account?",
+                                          "Bạn chưa có tài khoản?",
                                           style: TextStyle(
                                               color: Colors.black26,
                                               fontSize: 14),
@@ -449,7 +450,7 @@ class _doctor_pageState extends State<doctor_page> {
                                           }
                                         },
                                         child: Text(
-                                          " Create New Account",
+                                          " Tạo tài khoản mới",
                                           style: TextStyle(
                                               color: kPrimaryColor,
                                               fontSize: 14,
@@ -477,7 +478,7 @@ class _doctor_pageState extends State<doctor_page> {
       await auth
           .signInWithEmailAndPassword(email: email, password: password)
           .then((uid) => {
-                print("Login Successful"),
+                print("Đăng nhập thành công"),
                 Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(builder: (context) => DocHomePage()),

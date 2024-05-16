@@ -82,7 +82,7 @@ class _visitedState extends State<visited> {
               Navigator.pop(context);
             }),
         title: Text(
-          'Visited Patients',
+          'Bệnh nhân đến thăm',
           style: TextStyle(
             color: Colors.white,
             fontSize: 20,
@@ -106,7 +106,7 @@ class _visitedState extends State<visited> {
                   ),
                   filled: true,
                   fillColor: Colors.grey[200],
-                  hintText: 'Search Visited Patient',
+                  hintText: 'Tìm kiếm bệnh nhân đã đến thăm',
                   hintStyle: TextStyle(
                     color: Colors.black26,
                     fontSize: 18,
@@ -217,8 +217,8 @@ class _visitedState extends State<visited> {
                       if (!snapshot.hasData) {
                         return Container(
                             height: size.height * 1,
-                            child: Center(
-                                child: Text("Appointment not available")));
+                            child:
+                                Center(child: Text("Không có cuộc hẹn nào")));
                       } else {
                         return isLoading
                             ? Container(
@@ -241,13 +241,13 @@ class _visitedState extends State<visited> {
                                     Future.delayed(Duration(seconds: 3));
                                     return snapshot.hasData == null
                                         ? Center(
-                                            child: Text(
-                                                "Appointment Not Available"))
+                                            child:
+                                                Text("Không có cuộc hẹn nào"))
                                         : Padding(
                                             padding: const EdgeInsets.symmetric(
                                                 horizontal: 8, vertical: 2),
                                             child: Container(
-                                              height: 104,
+                                              height: 115,
                                               child: Card(
                                                 shape: RoundedRectangleBorder(
                                                   borderRadius:
@@ -280,7 +280,7 @@ class _visitedState extends State<visited> {
                                                                         top:
                                                                             8.0),
                                                                 child: Text(
-                                                                  'Name: ' +
+                                                                  'Họ tên: ' +
                                                                       doc['name'],
                                                                   style: TextStyle(
                                                                       color: Colors
@@ -308,7 +308,7 @@ class _visitedState extends State<visited> {
                                                                         left:
                                                                             8.0),
                                                                 child: Text(
-                                                                  "Date: " +
+                                                                  "Ngày: " +
                                                                       doc['date'],
                                                                   style: TextStyle(
                                                                       color: Colors
@@ -334,7 +334,7 @@ class _visitedState extends State<visited> {
                                                                         left:
                                                                             8.0),
                                                                 child: Text(
-                                                                  "Time: " +
+                                                                  "Thời gian: " +
                                                                       doc['time'],
                                                                   style: TextStyle(
                                                                       color: Colors
@@ -360,7 +360,7 @@ class _visitedState extends State<visited> {
                                                                         left:
                                                                             8.0),
                                                                 child: Text(
-                                                                  "Status: Visited",
+                                                                  "Trạng thái: Đã ghé thăm",
                                                                   style: TextStyle(
                                                                       color: Colors
                                                                           .white,

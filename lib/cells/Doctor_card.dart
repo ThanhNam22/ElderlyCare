@@ -3,12 +3,12 @@ import 'package:flutter/material.dart';
 import '../constants.dart';
 
 class SelectCard extends StatefulWidget {
-  final name;
-  final email;
-  final specialist;
-  final profileImage;
-  final rating;
-  final did;
+  final String name;
+  final String email;
+  final String specialist;
+  final String profileImage;
+  final String rating;
+  final String did;
 
   SelectCard({
     required this.name,
@@ -17,7 +17,6 @@ class SelectCard extends StatefulWidget {
     required this.profileImage,
     required this.rating,
     required this.did,
-    //   required this.onTap,
   });
 
   @override
@@ -25,161 +24,169 @@ class SelectCard extends StatefulWidget {
 }
 
 class _SelectCardState extends State<SelectCard> {
-  var patient_count = 0;
+  var patientCount = 0;
 
   @override
   void initState() {
-    // TODO: implement initState
-
-    FutureBuilder(
-      future: FirebaseFirestore.instance
-          .collection('pending')
-          .where('did', isEqualTo: widget.did)
-          .get()
-          .then((myDocuments) {
-        setState(() {
-          patient_count = myDocuments.docs.length;
-        });
-
-        print("${"lenght = " + myDocuments.docs.length.toString()}");
-
-        return myDocuments;
-      }),
-      builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
-        if (snapshot.hasError) {
-          return Center(child: CircularProgressIndicator());
-        }
-        return SizedBox();
-      },
-    );
-
     super.initState();
+    getPatientCount();
+  }
+
+  void getPatientCount() async {
+    var querySnapshot = await FirebaseFirestore.instance
+        .collection('pending')
+        .where('did', isEqualTo: widget.did)
+        .get();
+    setState(() {
+      patientCount = querySnapshot.docs.length;
+    });
   }
 
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
-    return GestureDetector(
-      child: Container(
-        width: size.width * 1,
-        height: 200,
-        clipBehavior: Clip.hardEdge,
-        decoration: BoxDecoration(
-          color: kPrimaryColor,
-          borderRadius: BorderRadius.circular(20),
-        ),
-        child: Stack(
-          children: [
-            Positioned(
-              right: 16,
-              child: SizedBox(
-                width: 180,
-                height: 200,
-                child: Image(
-                  image: AssetImage('assets/images/bg_shape.png'),
+
+    // Kiểm tra xem tên của bác sĩ có trong danh sách không hiển thị hay không
+    if (!shouldHideDoctor()) {
+      return GestureDetector(
+        child: Container(
+          width: size.width * 1,
+          height: 200,
+          clipBehavior: Clip.hardEdge,
+          decoration: BoxDecoration(
+            color: kPrimaryColor,
+            borderRadius: BorderRadius.circular(20),
+          ),
+          child: Stack(
+            children: [
+              Positioned(
+                right: 16,
+                child: SizedBox(
+                  width: 180,
+                  height: 200,
+                  child: Image(
+                    image: AssetImage('assets/images/bg_shape.png'),
+                  ),
                 ),
               ),
-            ),
-            Positioned(
-              top: 15,
-              left: size.width / 2,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    'Dr.',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 14,
-                      fontWeight: FontWeight.w700,
-                    ),
-                  ),
-                  Text(
-                    widget.name,
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 22,
-                      fontWeight: FontWeight.w700,
-                    ),
-                  ),
-                  SizedBox(
-                    height: 16,
-                  ),
-                  Text(
-                    widget.specialist + ' Specialist',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 14,
-                      fontWeight: FontWeight.w400,
-                    ),
-                  ),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  Text(
-                    patient_count.toString() + " Patient Visited",
-                    style: TextStyle(
+              Positioned(
+                top: 15,
+                left: size.width / 2,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Bác sĩ.',
+                      style: TextStyle(
                         color: Colors.white,
                         fontSize: 14,
-                        fontWeight: FontWeight.bold),
+                        fontWeight: FontWeight.w700,
+                      ),
+                    ),
+                    Text(
+                      widget.name,
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 22,
+                        fontWeight: FontWeight.w700,
+                      ),
+                    ),
+                    SizedBox(
+                      height: 16,
+                    ),
+                    Text(
+                      'Chuyên khoa' + widget.specialist,
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 14,
+                        fontWeight: FontWeight.w400,
+                      ),
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Text(
+                      patientCount.toString() + " Bệnh nhân thăm khám",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 14,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    SizedBox(
+                      height: 16,
+                    ),
+                    Row(
+                        children: new List.generate(
+                            5,
+                            (index) => buildStar(
+                                context,
+                                index,
+                                double.parse(widget.rating) != 'NaN'
+                                    ? double.parse(widget.rating)
+                                    : 0.0))),
+                  ],
+                ),
+              ),
+              Positioned(
+                left: 0,
+                bottom: 0,
+                child: Container(
+                  width: 77,
+                  height: 54,
+                  decoration: BoxDecoration(
+                    color: kPrimarydark,
+                    borderRadius:
+                        BorderRadius.only(topRight: Radius.circular(32)),
                   ),
-                  SizedBox(
-                    height: 16,
+                  child: Icon(
+                    Icons.arrow_forward,
+                    color: kPrimaryLightColor,
+                    size: 25,
                   ),
-                  Row(
-                      children: new List.generate(
-                          5,
-                          (index) => buildStar(
-                              context,
-                              index,
-                              double.parse(widget.rating) != 'NaN'
-                                  ? double.parse(widget.rating)
-                                  : 0.0))),
-                ],
-              ),
-            ),
-            Positioned(
-              left: 0,
-              bottom: 0,
-              child: Container(
-                width: 77,
-                height: 54,
-                decoration: BoxDecoration(
-                  color: kPrimarydark,
-                  borderRadius:
-                      BorderRadius.only(topRight: Radius.circular(32)),
-                ),
-                child: Icon(
-                  Icons.arrow_forward,
-                  color: kPrimaryLightColor,
-                  size: 25,
                 ),
               ),
-            ),
-            Positioned(
-              top: 15,
-              left: 20,
-              child: Container(
-                child: CircleAvatar(
-                  radius: 65,
-                  backgroundColor: Colors.white,
-                  child: widget.profileImage == false
-                      ? CircleAvatar(
-                          radius: 60,
-                          backgroundImage:
-                              AssetImage('assets/images/account.png'),
-                        )
-                      : CircleAvatar(
-                          radius: 60,
-                          backgroundImage: NetworkImage(widget.profileImage),
-                        ),
+              Positioned(
+                top: 15,
+                left: 20,
+                child: Container(
+                  child: CircleAvatar(
+                    radius: 65,
+                    backgroundColor: Colors.white,
+                    child: widget.profileImage == false
+                        ? CircleAvatar(
+                            radius: 60,
+                            backgroundImage:
+                                AssetImage('assets/images/account.png'),
+                          )
+                        : CircleAvatar(
+                            radius: 60,
+                            backgroundImage: NetworkImage(widget.profileImage),
+                          ),
+                  ),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
-      ),
-    );
+      );
+    } else {
+      return SizedBox(); // Trả về một SizedBox trống nếu tên của bác sĩ nằm trong danh sách không hiển thị
+    }
+  }
+
+  // Phương thức kiểm tra xem tên của bác sĩ có trong danh sách không hiển thị hay không
+  bool shouldHideDoctor() {
+    List<String> blacklistedNames = [
+      'Dipak Patel',
+      'Kevin Prajapati',
+      'Harsh Panchal',
+      'Dishang Rana',
+      'meet bharucha',
+      'Dhvanip Palsanawala',
+      'Harshiv Rana',
+      'Yash Modi'
+    ];
+    return blacklistedNames.contains(widget.name);
   }
 
   Widget buildStar(BuildContext context, int index, double doc) {

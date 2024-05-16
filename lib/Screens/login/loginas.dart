@@ -101,7 +101,7 @@ class _LoginasState extends State<Loginas> {
               padding: const EdgeInsets.only(top: 80),
               child: Center(
                   child: Text(
-                "Select What You Are?",
+                "Bạn là ai?",
                 style: TextStyle(
                   fontSize: 23,
                   color: Colors.deepPurple,
@@ -133,7 +133,7 @@ class _LoginasState extends State<Loginas> {
                             height: 50.0,
                             child: ElevatedButton(
                               child: Text(
-                                "Doctor",
+                                "Bác Sĩ",
                                 style: TextStyle(
                                   color: Colors.white,
                                   fontSize: 18.0,
@@ -166,7 +166,7 @@ class _LoginasState extends State<Loginas> {
                             height: 50.0,
                             child: ElevatedButton(
                               child: Text(
-                                "Elderly",
+                                "Bệnh Nhân",
                                 style: TextStyle(
                                   color: Colors.white,
                                   fontSize: 18.0,
@@ -212,7 +212,7 @@ class _LoginasState extends State<Loginas> {
       await auth
           .signInWithEmailAndPassword(email: email, password: password)
           .then((uid) => {
-                print("Login Successful"),
+                print("Đăng nhập thành công"),
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => HomePage()),

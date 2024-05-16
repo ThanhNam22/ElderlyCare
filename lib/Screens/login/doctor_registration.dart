@@ -29,18 +29,18 @@ class DocRegistration extends StatefulWidget {
 late UserCredential userCredential1;
 
 class _DocRegistrationState extends State<DocRegistration> {
-  String dropdownvalue = 'Select Your Category';
+  String dropdownvalue = 'Chuyên Khoa';
   var items = [
-    'Select Your Category',
-    'Neuro',
-    'Ear',
-    'Eyes',
-    'Hair',
-    'Kidney',
-    'Skin',
-    'Thyroid',
-    'Tooth',
-    'Ortho',
+    'Chuyên Khoa',
+    'Thần kinh',
+    'Tai',
+    'Mắt',
+    'Tóc',
+    'Thận',
+    'Da',
+    'Tuyến giáp',
+    'Răng',
+    'Sương khớp',
     'Covid-19',
   ];
 
@@ -175,7 +175,7 @@ class _DocRegistrationState extends State<DocRegistration> {
                         child: Container(
                           child: Center(
                               child: Text(
-                            "Doctor Registration",
+                            "Đăng Ký Bác Sĩ",
                             style: TextStyle(
                                 fontSize: 32,
                                 color: Colors.black,
@@ -240,11 +240,11 @@ class _DocRegistrationState extends State<DocRegistration> {
                         child: TextFormField(
                           keyboardType: TextInputType.name,
                           cursorColor: kPrimaryColor,
-                          decoration: buildInputDecoration(
-                              Icons.person, "Doctor Full Name"),
+                          decoration:
+                              buildInputDecoration(Icons.person, "Họ và tên "),
                           validator: (var value) {
                             if (value!.isEmpty) {
-                              return "Enter Your Name";
+                              return "Nhập tên của bạn";
                             }
                             return null;
                           },
@@ -265,13 +265,13 @@ class _DocRegistrationState extends State<DocRegistration> {
                           keyboardType: TextInputType.text,
                           cursorColor: kPrimaryColor,
                           decoration: buildInputDecoration(Icons.add_location,
-                              "Hospital or Clinic Name & Address"),
+                              "Địa chỉ bệnh viện hoặc phòng khám "),
                           onChanged: (address) {
                             t_address = address;
                           },
                           validator: (var value) {
                             if (value!.isEmpty) {
-                              return "Enter Your Address";
+                              return "Nhập địa chỉ của bạn ";
                             }
                             return null;
                           },
@@ -289,7 +289,7 @@ class _DocRegistrationState extends State<DocRegistration> {
                           keyboardType: TextInputType.emailAddress,
                           cursorColor: kPrimaryColor,
                           decoration: buildInputDecoration(
-                              Icons.email, "Doctor Email "),
+                              Icons.email, "Email bác sĩ "),
                           onChanged: (email) {
                             t_email = email.trim();
                             print("Email: " + t_email + ":");
@@ -298,7 +298,7 @@ class _DocRegistrationState extends State<DocRegistration> {
                             if (isEmailValid(email!))
                               return null;
                             else {
-                              return 'Enter a valid email address';
+                              return 'Nhập địa chỉ email hợp lệ';
                             }
                           },
                           onSaved: (var email) {
@@ -319,8 +319,8 @@ class _DocRegistrationState extends State<DocRegistration> {
                           dropdownTextStyle: TextStyle(fontSize: 16),
                           dropdownIcon:
                               Icon(Icons.arrow_drop_down, color: kPrimaryColor),
-                          decoration: buildInputDecoration(
-                              Icons.phone, "Contact Number"),
+                          decoration:
+                              buildInputDecoration(Icons.phone, "Số liên lạc "),
                           initialCountryCode: 'VN',
                           onChanged: (phone) {
                             print(phone.completeNumber);
@@ -340,7 +340,7 @@ class _DocRegistrationState extends State<DocRegistration> {
                             Row(
                               children: <Widget>[
                                 Text(
-                                  "Date Of Birth: ",
+                                  "Ngày sinh: ",
                                   style: TextStyle(
                                       fontWeight: FontWeight.bold,
                                       color: kPrimaryColor),
@@ -355,7 +355,7 @@ class _DocRegistrationState extends State<DocRegistration> {
                                               padding: const EdgeInsets.only(
                                                   left: 20.0),
                                               child: Text(
-                                                "Select Date",
+                                                "Chọn ngày",
                                                 style: TextStyle(
                                                     color: Colors.black54),
                                               ),
@@ -390,7 +390,7 @@ class _DocRegistrationState extends State<DocRegistration> {
                               ],
                             ),
                             c_data == true
-                                ? Text("*Select Date",
+                                ? Text("*Chọn ngày",
                                     style: TextStyle(
                                         color: Colors.red,
                                         fontWeight: FontWeight.w400))
@@ -412,7 +412,7 @@ class _DocRegistrationState extends State<DocRegistration> {
                                   alignment: MainAxisAlignment.center,
                                   children: [
                                     Text(
-                                      "Gender :",
+                                      "Giới tính :",
                                       style: TextStyle(
                                           fontWeight: FontWeight.bold,
                                           color: kPrimaryColor),
@@ -424,7 +424,7 @@ class _DocRegistrationState extends State<DocRegistration> {
                                         onChanged: (val) {
                                           setSelectedgender(val as int);
                                         }),
-                                    Text("Male"),
+                                    Text("Nam"),
                                     Radio(
                                         value: 2,
                                         activeColor: kPrimaryColor,
@@ -432,13 +432,13 @@ class _DocRegistrationState extends State<DocRegistration> {
                                         onChanged: (val) {
                                           setSelectedgender(val as int);
                                         }),
-                                    Text("Female"),
+                                    Text("Nữ"),
                                   ],
                                 )
                               ],
                             ),
                             c_gender == true
-                                ? Text("*Select Gender",
+                                ? Text("*Chọn giới tính",
                                     style: TextStyle(
                                         color: Colors.red,
                                         fontWeight: FontWeight.w400))
@@ -462,7 +462,7 @@ class _DocRegistrationState extends State<DocRegistration> {
                                   alignment: MainAxisAlignment.center,
                                   children: [
                                     Text(
-                                      "Marital\nStatus:",
+                                      "Tình trạng\nhôn nhân:",
                                       style: TextStyle(
                                           fontWeight: FontWeight.bold,
                                           color: kPrimaryColor),
@@ -475,7 +475,7 @@ class _DocRegistrationState extends State<DocRegistration> {
                                         setSelectedstatus(val as int);
                                       },
                                     ),
-                                    Text("Unmarried"),
+                                    Text("Độc thân"),
                                     Radio(
                                         value: 2,
                                         groupValue: m_status,
@@ -483,13 +483,13 @@ class _DocRegistrationState extends State<DocRegistration> {
                                         onChanged: (val) {
                                           setSelectedstatus(val as int);
                                         }),
-                                    Text("Married"),
+                                    Text("Kết hôn"),
                                   ],
                                 )
                               ],
                             ),
                             c_status == true
-                                ? Text("*Select status",
+                                ? Text("*Chọn trạng thái",
                                     style: TextStyle(
                                         color: Colors.red,
                                         fontWeight: FontWeight.w400))
@@ -510,7 +510,7 @@ class _DocRegistrationState extends State<DocRegistration> {
                                   alignment: MainAxisAlignment.center,
                                   children: [
                                     Text(
-                                      "Category:",
+                                      "Khoa:",
                                       style: TextStyle(
                                           fontWeight: FontWeight.bold,
                                           color: kPrimaryColor),
@@ -518,7 +518,7 @@ class _DocRegistrationState extends State<DocRegistration> {
                                     Padding(
                                       padding: const EdgeInsets.only(left: 20),
                                       child: DropdownButton(
-                                        hint: Text('Select Your Category'),
+                                        hint: Text('Chọn chuyên khoa của bạn'),
                                         value: dropdownvalue,
 
                                         icon: const Icon(
@@ -544,7 +544,7 @@ class _DocRegistrationState extends State<DocRegistration> {
                               ],
                             ),
                             c_status == true
-                                ? Text("*Select Category",
+                                ? Text("*Chuyên khoa",
                                     style: TextStyle(
                                         color: Colors.red,
                                         fontWeight: FontWeight.w400))
@@ -563,7 +563,7 @@ class _DocRegistrationState extends State<DocRegistration> {
                                   alignment: MainAxisAlignment.center,
                                   children: [
                                     Text(
-                                      "Upload A Valid Proof:",
+                                      "Tải chứng chỉ:",
                                       style: TextStyle(
                                           fontWeight: FontWeight.bold,
                                           color: kPrimaryColor),
@@ -573,12 +573,12 @@ class _DocRegistrationState extends State<DocRegistration> {
                                           const EdgeInsets.only(left: 40.0),
                                       child: ElevatedButton(
                                           style: ElevatedButton.styleFrom(
-                                              backgroundColor: kPrimaryColor,
+                                              backgroundColor: kPrimarydark1,
                                               shape: StadiumBorder()),
                                           onPressed: () async {
                                             chooseImage2();
                                           },
-                                          child: Text("Choose File")),
+                                          child: Text("Tải lên file")),
                                     ),
                                   ],
                                 )
@@ -595,13 +595,13 @@ class _DocRegistrationState extends State<DocRegistration> {
                           keyboardType: TextInputType.number,
                           cursorColor: kPrimaryColor,
                           decoration: buildInputDecoration(
-                              Icons.access_time_rounded, "Experience"),
+                              Icons.access_time_rounded, "Kinh nghiệm"),
                           //onChanged: (){},
                           validator: (var value) {
                             if (value!.isEmpty) {
-                              return "Enter Your Experince";
+                              return "Nhập kinh nghiệm của bạn";
                             } else if (value.length > 2) {
-                              return "Experience must be in two digit";
+                              return "Kinh nghiệm phải ở dạng số";
                             }
                             return null;
                           },
@@ -621,11 +621,11 @@ class _DocRegistrationState extends State<DocRegistration> {
                           keyboardType: TextInputType.multiline,
                           cursorColor: kPrimaryColor,
                           decoration: buildInputDecoration(
-                              Icons.accessibility, "Doctor Description"),
+                              Icons.accessibility, "Mô tả bác sĩ "),
                           //onChanged: (){},
                           validator: (var value) {
                             if (value!.isEmpty) {
-                              return "Enter Description";
+                              return "Nhập mô tả";
                             }
                             return null;
                           },
@@ -694,10 +694,10 @@ class _DocRegistrationState extends State<DocRegistration> {
                           validator: (value) {
                             RegExp regex = new RegExp(r'^.{6,}$');
                             if (value!.isEmpty) {
-                              return ("Password is required for login");
+                              return ("Mật khẩu không được bỏ trống");
                             }
                             if (!regex.hasMatch(value)) {
-                              return ("Enter Valid Password(Min. 6 Character)");
+                              return ("Nhập mật khẩu hợp lệ (Tối thiểu 6 ký tự)");
                             }
                           },
                           onChanged: (password) {
@@ -757,13 +757,13 @@ class _DocRegistrationState extends State<DocRegistration> {
                                   width: 2,
                                 ),
                               ),
-                              hintText: "Confirm Password"),
+                              hintText: "Xác nhận mật khẩu"),
                           onChanged: (value) {
                             tc_password = value;
                           },
                           validator: (value) {
                             if (tc_password != t_password) {
-                              return "Password don't match";
+                              return "Mật khẩu không khớp";
                             }
                             return null;
                           },
@@ -794,7 +794,7 @@ class _DocRegistrationState extends State<DocRegistration> {
                                 onPressed: () async {
                                   if (file2 == null) {
                                     Fluttertoast.showToast(
-                                        msg: "No File Chosen",
+                                        msg: "Không có tập tin nào được chọn",
                                         textColor: Colors.white,
                                         backgroundColor: Colors.red);
                                   }
@@ -821,17 +821,18 @@ class _DocRegistrationState extends State<DocRegistration> {
                                         print("FirebaseError: " + error.code);
                                         if (error.code == "invalid-email") {
                                           errorMessage =
-                                              "Your email address appears to be malformed.";
+                                              "Địa chỉ email của bạn dường như không đúng định dạng.";
                                         } else if (error.code ==
                                             "user-disabled") {
                                           errorMessage =
-                                              "User with this email has been disabled.";
+                                              "Người dùng có email này đã bị vô hiệu hóa.";
                                         } else if (error.code ==
                                             "too-many-requests") {
                                           errorMessage = "Too many requests";
                                         } else if (error.code ==
                                             "email-already-in-use") {
-                                          errorMessage = "email already in use";
+                                          errorMessage =
+                                              "email đã được sử dụng";
                                         }
                                         Fluttertoast.showToast(
                                             msg: errorMessage.toString());
@@ -884,8 +885,7 @@ class _DocRegistrationState extends State<DocRegistration> {
                                           })
                                           .then((value) =>
                                               Fluttertoast.showToast(
-                                                  msg:
-                                                      "Registration Successful",
+                                                  msg: "Đăng ký thành công",
                                                   toastLength:
                                                       Toast.LENGTH_SHORT,
                                                   gravity: ToastGravity.BOTTOM,
@@ -921,7 +921,7 @@ class _DocRegistrationState extends State<DocRegistration> {
                                   setState(() {});
                                 },
                                 child: Text(
-                                  'Sign In',
+                                  'Đăng ký',
                                   style: TextStyle(
                                       color: Colors.white,
                                       fontSize: 18,
@@ -987,7 +987,7 @@ class _DocRegistrationState extends State<DocRegistration> {
     XFile? xfile2 = await ImagePicker().pickImage(source: ImageSource.gallery);
     print("file " + xfile2!.path);
     file2 = File(xfile2.path);
-    Fluttertoast.showToast(msg: "Chosen File:" + file2.path);
+    Fluttertoast.showToast(msg: "Chọn file:" + file2.path);
     setState(() {});
   }
 }

@@ -289,7 +289,7 @@ class _UserProfileState extends State<UserProfile> {
                         width: 10,
                       ),
                       Text(
-                        'Bio',
+                        'Tiểu sử',
                         style: TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.bold,
@@ -334,7 +334,7 @@ class _UserProfileState extends State<UserProfile> {
                         width: 10,
                       ),
                       Text(
-                        "Appointment History",
+                        "Lịch sử cuộc hẹn",
                         style: TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.bold,
@@ -346,7 +346,7 @@ class _UserProfileState extends State<UserProfile> {
                           padding: EdgeInsets.only(right: 10),
                           alignment: Alignment.centerRight,
                           child: SizedBox(
-                            height: 30,
+                            height: 40,
                             child: TextButton(
                               onPressed: () {
                                 Navigator.of(context).push(MaterialPageRoute(
@@ -398,7 +398,7 @@ class _UserProfileState extends State<UserProfile> {
           alignment: Alignment.centerLeft,
           padding: EdgeInsets.only(top: 10, left: 40),
           child: Text(
-            'No bio',
+            'Không có tiểu sử',
             style: TextStyle(
               fontSize: 16,
               fontWeight: FontWeight.w500,

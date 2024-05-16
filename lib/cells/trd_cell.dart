@@ -104,7 +104,7 @@ class _TrdCellState extends State<TrdCell> {
               height: 24,
             ),
             Text(
-              'Dr. ' + widget.name /* ' ' + widget.email*/,
+              'Bác sĩ. ' + widget.name /* ' ' + widget.email*/,
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 16,
@@ -114,7 +114,7 @@ class _TrdCellState extends State<TrdCell> {
               height: 8,
             ),
             Text(
-              widget.specialist + ' Specialist',
+              'Chuyên khoa ' + widget.specialist,
               style: TextStyle(
                 color: kPrimaryhinttext,
                 fontSize: 14,

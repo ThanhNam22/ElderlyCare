@@ -64,7 +64,7 @@ class _Confirm_AppointmentState extends State<Confirm_Appointment> {
                 return Container(
                     height: size.height * 1,
                     child: Center(
-                        child: Text("You Do Not Have An Appointment today.")));
+                        child: Text("Hôm nay bạn không có cuộc hẹn nào.")));
               } else {
                 return isLoading
                     ? Container(
@@ -86,12 +86,12 @@ class _Confirm_AppointmentState extends State<Confirm_Appointment> {
 
                             Future.delayed(Duration(seconds: 3));
                             return snapshot.hasData == null
-                                ? Center(child: Text("Doctor Not Available"))
+                                ? Center(child: Text("Bác sĩ đang bận"))
                                 : Padding(
                                     padding: const EdgeInsets.symmetric(
                                         horizontal: 8, vertical: 6),
                                     child: Container(
-                                      height: 122,
+                                      height: 135,
                                       child: Card(
                                         shape: RoundedRectangleBorder(
                                           borderRadius: BorderRadius.all(
@@ -114,11 +114,11 @@ class _Confirm_AppointmentState extends State<Confirm_Appointment> {
                                                       child: Padding(
                                                         padding:
                                                             const EdgeInsets
-                                                                    .only(
+                                                                .only(
                                                                 left: 8.0,
                                                                 top: 8.0),
                                                         child: Text(
-                                                          "Dr. " +
+                                                          "Bác sĩ. " +
                                                               doc['doctor_name'],
                                                           style: TextStyle(
                                                               color:
@@ -139,10 +139,10 @@ class _Confirm_AppointmentState extends State<Confirm_Appointment> {
                                                       child: Padding(
                                                         padding:
                                                             const EdgeInsets
-                                                                    .only(
+                                                                .only(
                                                                 left: 8.0),
                                                         child: Text(
-                                                          "Date: " +
+                                                          "Ngày: " +
                                                               doc['date'],
                                                           style: TextStyle(
                                                               color:
@@ -164,10 +164,10 @@ class _Confirm_AppointmentState extends State<Confirm_Appointment> {
                                                       child: Padding(
                                                         padding:
                                                             const EdgeInsets
-                                                                    .only(
+                                                                .only(
                                                                 left: 8.0),
                                                         child: Text(
-                                                          "Time: " +
+                                                          "Thời gian: " +
                                                               doc['time'],
                                                           style: TextStyle(
                                                               color:
@@ -189,10 +189,10 @@ class _Confirm_AppointmentState extends State<Confirm_Appointment> {
                                                       child: Padding(
                                                         padding:
                                                             const EdgeInsets
-                                                                    .only(
+                                                                .only(
                                                                 left: 8.0),
                                                         child: Text(
-                                                          "Status: Confirm",
+                                                          "Trạng thái: Xác nhận",
                                                           style: TextStyle(
                                                               color:
                                                                   Colors.white,
@@ -213,10 +213,10 @@ class _Confirm_AppointmentState extends State<Confirm_Appointment> {
                                                       child: Padding(
                                                         padding:
                                                             const EdgeInsets
-                                                                    .only(
+                                                                .only(
                                                                 left: 8.0),
                                                         child: Text(
-                                                          "Payment: Success",
+                                                          "Thanh toán: Đã thanh toán",
                                                           style: TextStyle(
                                                               color:
                                                                   Colors.white,
@@ -262,7 +262,7 @@ class _Confirm_AppointmentState extends State<Confirm_Appointment> {
                                                               top: 10.0,
                                                               bottom: 10),
                                                       child: Text(
-                                                        "Cancel ",
+                                                        "Hủy ",
                                                         style: TextStyle(
                                                             color: Colors.white,
                                                             fontWeight:

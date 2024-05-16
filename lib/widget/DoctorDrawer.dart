@@ -80,7 +80,7 @@ class _DocDrawerState extends State<DocDrawer> {
                   title: Padding(
                     padding: const EdgeInsets.only(left: 25.0),
                     child: Text(
-                      'Verified Doctor',
+                      'Bác sĩ đã được xác minh',
                       // ignore: deprecated_member_use
                       textScaleFactor: 1.5,
                       style: TextStyle(
@@ -145,26 +145,26 @@ class _DocDrawerState extends State<DocDrawer> {
                   width: 10,
                   color: kPrimaryLightColor,
                 ),
-                CustomList(Icons.check, "Visited Patients", () {
+                CustomList(Icons.check, "Bệnh nhân đến thăm", () {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => visited()));
                 }),
-                CustomList(Icons.timelapse, "Pending Patients", () {
+                CustomList(Icons.timelapse, "Bệnh nhân đang chờ xử lý", () {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => notvisited()));
                 }),
                 // Privacy Policy
-                CustomList(Icons.announcement, "Privacy Policy", () async {
+                CustomList(Icons.announcement, "Chính sách bảo mật", () async {
                   final Uri _url = Uri.parse('');
                   if (!await launchUrl(_url)) {
                     throw 'Could not launch ';
                   }
                 }),
-                CustomList(Icons.data_object, "About", () {
+                CustomList(Icons.data_object, "Thông tin về chúng tôi", () {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => about()));
                 }),
-                CustomList(Icons.lock, "Log Out", () async {
+                CustomList(Icons.lock, "Đăng xuất", () async {
                   await FirebaseAuth.instance.signOut();
                   _prefService.removeCache("password");
                   Navigator.of(context).pushReplacement(

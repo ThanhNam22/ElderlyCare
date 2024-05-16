@@ -78,7 +78,7 @@ class _Docter_pageState extends State<Docter_page> {
                     builder: (BuildContext context,
                         AsyncSnapshot<QuerySnapshot> snapshot) {
                       if (!snapshot.hasData) {
-                        return Center(child: Text("Doctor Not Available"));
+                        return Center(child: Text("Không có bác sĩ nào"));
                       } else {
                         return ListView.builder(
                           controller: ScrollController(keepScrollOffset: false),
@@ -91,7 +91,7 @@ class _Docter_pageState extends State<Docter_page> {
                             print("Special Doc: " +
                                 snapshot.data!.docs.length.toString());
                             if (doc["specialist"].toString().isEmpty) {
-                              return Text("No Doctor Found");
+                              return Text("Không tìm thấy bác sĩ");
                             } else {
                               return GestureDetector(
                                 onTap: () {

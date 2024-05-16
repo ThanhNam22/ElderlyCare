@@ -15,7 +15,7 @@ class _Disease1State extends State<Disease1> {
         appBar: AppBar(
           backgroundColor: Colors.white,
           title: Text(
-            'Disease',
+            'Bệnh lý',
             style: TextStyle(
                 color: Colors.black, fontSize: 20, fontWeight: FontWeight.bold),
           ),

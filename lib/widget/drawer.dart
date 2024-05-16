@@ -78,7 +78,7 @@ class _MyDrawerState extends State<MyDrawer> {
                 ),
 
                 //profile
-                CustomList(Icons.person, "Profile", () {
+                CustomList(Icons.person, "Thôn tin các nhân", () {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => UserProfile()));
                 }),
@@ -87,18 +87,18 @@ class _MyDrawerState extends State<MyDrawer> {
                       context, MaterialPageRoute(builder: (context) => faqs()));
                 }),
                 // Privacy Policy
-                CustomList(Icons.announcement, "Privacy Policy", () async {
+                CustomList(Icons.announcement, "Chính sách bảo mật", () async {
                   final Uri _url = Uri.parse('');
                   if (!await launchUrl(_url)) {
                     throw 'Could not launch ';
                   }
                 }),
 
-                CustomList(Icons.data_object, "About", () {
+                CustomList(Icons.data_object, "Thông tin về chúng tôi", () {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => about()));
                 }),
-                CustomList(Icons.lock, "Log Out", () async {
+                CustomList(Icons.lock, "Đăng xuất", () async {
                   await FirebaseAuth.instance.signOut();
                   _prefService.removeCache("password");
                   Navigator.of(context).pushReplacement(

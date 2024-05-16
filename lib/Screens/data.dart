@@ -21,7 +21,7 @@ class Dataclass extends StatelessWidget {
               .catchError((error) => print("add user:$error"));
         },
         child: Text(
-          'LOGIN',
+          'Đăng nhập',
           style: TextStyle(
               color: Colors.white, fontSize: 18, fontWeight: FontWeight.w500),
         ),

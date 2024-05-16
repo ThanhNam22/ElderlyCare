@@ -109,7 +109,7 @@ class _ForgetPasswordState extends State<ForgetPassword> {
                     Container(
                       child: Center(
                           child: Text(
-                        "Reset Password",
+                        "Đặt lại mật khẩu",
                         style: TextStyle(
                             fontSize: 22,
                             color: kPrimaryColor,
@@ -132,8 +132,8 @@ class _ForgetPasswordState extends State<ForgetPassword> {
                       child: TextFormField(
                         keyboardType: TextInputType.emailAddress,
                         cursorColor: kPrimaryColor,
-                        decoration:
-                            buildInputDecoration(Icons.email, "Enter Your Email "),
+                        decoration: buildInputDecoration(
+                            Icons.email, "Nhập email của bạn "),
                         onChanged: (email) {
                           t_email = email.trim();
                         },
@@ -141,7 +141,7 @@ class _ForgetPasswordState extends State<ForgetPassword> {
                           if (isEmailValid(email!))
                             return null;
                           else
-                            return 'Enter a valid email address';
+                            return 'Nhập địa chỉ email hợp lệ';
                         },
                         onSaved: (var email) {
                           t_email = email.toString().trim();
@@ -172,7 +172,7 @@ class _ForgetPasswordState extends State<ForgetPassword> {
                                     .then((value) {
                                   Fluttertoast.showToast(
                                       backgroundColor: kPrimaryColor,
-                                      msg: "Send E-Mail To Your Account",
+                                      msg: "Gửi E-mail đến tài khoản của bạn",
                                       toastLength: Toast.LENGTH_LONG,
                                       gravity: ToastGravity.BOTTOM,
                                       timeInSecForIosWeb: 1,
@@ -187,7 +187,7 @@ class _ForgetPasswordState extends State<ForgetPassword> {
                           }
                         },
                         child: Text(
-                          'Reset Password',
+                          'Đặt lại mật khẩu',
                           style: TextStyle(
                               color: Colors.white,
                               fontSize: 18,

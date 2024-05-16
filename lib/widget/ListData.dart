@@ -44,7 +44,7 @@ class ListData extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  'Time: ' + time,
+                  'Thời gian: ' + time,
                   style: TextStyle(
                     fontSize: 18,
                   ),

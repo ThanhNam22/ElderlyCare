@@ -31,7 +31,7 @@ class _DoctorsListState extends State<DoctorsList> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
-        title: Text('Find Doctors'),
+        title: Text('Tìm bác sĩ'),
         actions: <Widget>[
           SafeArea(
             child: Container(
@@ -48,7 +48,7 @@ class _DoctorsListState extends State<DoctorsList> {
                   ),
                   filled: true,
                   fillColor: Colors.grey[300],
-                  hintText: 'Search Doctor',
+                  hintText: 'Tìm kiếm bác sĩ',
                   hintStyle: TextStyle(
                     color: Colors.black26,
                     fontSize: 18,

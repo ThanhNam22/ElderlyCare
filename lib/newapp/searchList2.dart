@@ -47,7 +47,7 @@ class _SearchList2State extends State<SearchList2> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
-                            'No Patient Found!',
+                            'Không có bệnh nhân nào!',
                             style: TextStyle(
                               color: Colors.blue[800],
                               fontSize: 25,
@@ -83,7 +83,7 @@ class _SearchList2State extends State<SearchList2> {
                               padding:
                                   EdgeInsets.only(left: 10, right: 10, top: 0),
                               width: MediaQuery.of(context).size.width,
-                              height: MediaQuery.of(context).size.height / 8,
+                              height: MediaQuery.of(context).size.height / 7,
                               child: TextButton(
                                 onPressed: () {},
                                 child: Row(
@@ -154,7 +154,7 @@ class _SearchList2State extends State<SearchList2> {
                                           mainAxisAlignment:
                                               MainAxisAlignment.end,
                                           children: [
-                                            Text('Age:'),
+                                            Text('Tuổi:'),
                                             SizedBox(
                                               width: 5,
                                             ),

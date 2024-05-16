@@ -67,7 +67,7 @@ class _PendingState extends State<Pending> {
                 return Container(
                     height: size.height * 1,
                     child: Center(
-                        child: Text("You Do Not Have An Appointment today.")));
+                        child: Text("Hôm nay bạn không có cuộc hẹn nào.")));
               } else {
                 return isLoading
                     ? Container(
@@ -88,7 +88,7 @@ class _PendingState extends State<Pending> {
                                 snapshot.data!.docs[index];
 
                             return snapshot.hasError
-                                ? Center(child: Text("Doctor Not Available"))
+                                ? Center(child: Text("Bác sĩ đang bận"))
                                 : Padding(
                                     padding: const EdgeInsets.symmetric(
                                         horizontal: 8, vertical: 6),
@@ -120,7 +120,7 @@ class _PendingState extends State<Pending> {
                                                                 left: 8.0,
                                                                 top: 8.0),
                                                         child: Text(
-                                                          "Dr. " +
+                                                          "Bác sĩ. " +
                                                               doc['doctor_name'],
                                                           style: TextStyle(
                                                               color:
@@ -147,7 +147,7 @@ class _PendingState extends State<Pending> {
                                                                 .only(
                                                                 left: 8.0),
                                                         child: Text(
-                                                          "Date: " +
+                                                          "Ngày: " +
                                                               doc['date'],
                                                           style: TextStyle(
                                                               color: Colors
@@ -172,7 +172,7 @@ class _PendingState extends State<Pending> {
                                                                 .only(
                                                                 left: 8.0),
                                                         child: Text(
-                                                          "Time: " +
+                                                          "Thời gian: " +
                                                               doc['time'],
                                                           style: TextStyle(
                                                               color: Colors
@@ -197,7 +197,7 @@ class _PendingState extends State<Pending> {
                                                                 .only(
                                                                 left: 8.0),
                                                         child: Text(
-                                                          "Status: Pending",
+                                                          "Trạng thái: Chưa xác nhận",
                                                           style: TextStyle(
                                                               color: Colors
                                                                   .black87,
@@ -221,7 +221,7 @@ class _PendingState extends State<Pending> {
                                                                 .only(
                                                                 left: 8.0),
                                                         child: Text(
-                                                          "Payment: Success",
+                                                          "Thanh toán: Đã thanh toán",
                                                           style: TextStyle(
                                                               color: Colors
                                                                   .black87,
@@ -267,7 +267,7 @@ class _PendingState extends State<Pending> {
                                                               top: 10.0,
                                                               bottom: 10),
                                                       child: Text(
-                                                        "Cancel ",
+                                                        "Hủy ",
                                                         style: TextStyle(
                                                             color: Colors.white,
                                                             fontWeight:
@@ -315,7 +315,7 @@ class alertdialog extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.only(top: 47.0),
                     child: Text(
-                      'Are you sure you want to cancel this appointment?',
+                      'Bạn có chắc chắn muốn hủy cuộc hẹn này không?',
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 20,
@@ -333,7 +333,7 @@ class alertdialog extends StatelessWidget {
                             Navigator.of(context).pop();
                           },
                           child: Text(
-                            'No',
+                            'Không',
                             style: TextStyle(
                                 color: Colors.white,
                                 fontWeight: FontWeight.bold),
@@ -361,7 +361,7 @@ class alertdialog extends StatelessWidget {
                             child: Padding(
                               padding: EdgeInsets.symmetric(horizontal: 19),
                               child: Text(
-                                'Yes',
+                                'Có',
                                 style: TextStyle(
                                     color: Colors.white,
                                     fontWeight: FontWeight.bold),

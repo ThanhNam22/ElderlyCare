@@ -65,7 +65,7 @@ class _AppointmentState extends State<Appointment>
           },
         ),
         title: Text(
-          'Appointment',
+          'Cuộc hện',
           style: TextStyle(
               color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold),
         ),
@@ -76,13 +76,13 @@ class _AppointmentState extends State<Appointment>
           indicatorColor: Colors.white,
           tabs: [
             Tab(
-              text: 'Confirm',
+              text: 'Xác nhận',
             ),
             Tab(
-              text: 'Pending',
+              text: 'Chưa xác nhận',
             ),
             Tab(
-              text: 'Recent',
+              text: 'Gần đây',
             ),
           ],
         ),

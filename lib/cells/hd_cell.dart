@@ -56,7 +56,7 @@ class _HDCellState extends State<HDCell> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Dr.',
+                    'Bác sĩ.',
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 14,
@@ -75,7 +75,7 @@ class _HDCellState extends State<HDCell> {
                     height: 16,
                   ),
                   Text(
-                    widget.specialist + ' Specialist',
+                    'Chuyên khoa ' + widget.specialist,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 14,

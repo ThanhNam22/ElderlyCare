@@ -127,7 +127,7 @@ class _Appoin_timeState extends State<Appoin_time> {
 
   void _handlePaymentSuccess(PaymentSuccessResponse response) {
     Fluttertoast.showToast(
-        msg: 'Payment Success ' + response.paymentId!,
+        msg: 'Thanh toán thành công ' + response.paymentId!,
         toastLength: Toast.LENGTH_SHORT,
         gravity: ToastGravity.BOTTOM,
         timeInSecForIosWeb: 10,
@@ -165,7 +165,7 @@ class _Appoin_timeState extends State<Appoin_time> {
             },
           ),
           title: Text(
-            "Appointment Time",
+            "Thời gian hẹn",
             style: TextStyle(color: Colors.white, fontWeight: FontWeight.w400),
           ),
         ),
@@ -203,7 +203,7 @@ class _Appoin_timeState extends State<Appoin_time> {
                         children: [
                           c_date == null
                               ? Text(
-                                  "Select Date",
+                                  "Chọn ngày",
                                   style: TextStyle(color: Colors.white),
                                 )
                               : Text(
@@ -234,7 +234,7 @@ class _Appoin_timeState extends State<Appoin_time> {
                       width: 5,
                     ),
                     Text(
-                      "MORNING",
+                      "Buổi sáng",
                       style: TextStyle(
                           color: kPrimaryColor,
                           fontSize: 18,
@@ -269,7 +269,7 @@ class _Appoin_timeState extends State<Appoin_time> {
                           if (today_app1 < 2) {
                             if (c_date == null) {
                               Fluttertoast.showToast(
-                                  msg: " Please Select Date First",
+                                  msg: " Vui lòng chọn ngày trước",
                                   backgroundColor: kPrimaryColor,
                                   textColor: Colors.white);
                             } else {
@@ -287,7 +287,7 @@ class _Appoin_timeState extends State<Appoin_time> {
                         if (today_app2 < 2) {
                           if (c_date == null) {
                             Fluttertoast.showToast(
-                                msg: " Please Select Date First",
+                                msg: " Vui lòng chọn ngày đầu tiên",
                                 backgroundColor: kPrimaryColor,
                                 textColor: Colors.white);
                           } else {
@@ -330,7 +330,7 @@ class _Appoin_timeState extends State<Appoin_time> {
                       width: 5,
                     ),
                     Text(
-                      "AFTERNOON",
+                      "Buổi chiều",
                       style: TextStyle(
                           color: kPrimaryColor,
                           fontSize: 18,
@@ -347,7 +347,7 @@ class _Appoin_timeState extends State<Appoin_time> {
                         if (today_app3 < 2) {
                           if (c_date == null) {
                             Fluttertoast.showToast(
-                                msg: " Please Select Date First",
+                                msg: " Vui lòng chọn ngày trước",
                                 backgroundColor: kPrimaryColor,
                                 textColor: Colors.white);
                           } else {
@@ -383,7 +383,7 @@ class _Appoin_timeState extends State<Appoin_time> {
                         if (today_app4 < 2) {
                           if (c_date == null) {
                             Fluttertoast.showToast(
-                                msg: " Please Select Date First",
+                                msg: " Vui lòng chọn ngày trước",
                                 backgroundColor: kPrimaryColor,
                                 textColor: Colors.white);
                           } else {
@@ -423,7 +423,7 @@ class _Appoin_timeState extends State<Appoin_time> {
                       if (today_app5 < 2) {
                         if (c_date == null) {
                           Fluttertoast.showToast(
-                              msg: " Please Select Date First",
+                              msg: " Vui lòng chọn ngày trước",
                               backgroundColor: kPrimaryColor,
                               textColor: Colors.white);
                         } else {
@@ -464,7 +464,7 @@ class _Appoin_timeState extends State<Appoin_time> {
                       width: 5,
                     ),
                     Text(
-                      "EVENING",
+                      "Buổi sáng",
                       style: TextStyle(
                           color: kPrimaryColor,
                           fontSize: 18,
@@ -481,7 +481,7 @@ class _Appoin_timeState extends State<Appoin_time> {
                         if (today_app6 < 2) {
                           if (c_date == null) {
                             Fluttertoast.showToast(
-                                msg: " Please Select Date First",
+                                msg: " Vui lòng chọn ngày trước",
                                 backgroundColor: kPrimaryColor,
                                 textColor: Colors.white);
                           } else {
@@ -517,7 +517,7 @@ class _Appoin_timeState extends State<Appoin_time> {
                         if (today_app7 < 2) {
                           if (c_date == null) {
                             Fluttertoast.showToast(
-                                msg: " Please Select Date First",
+                                msg: " Vui lòng chọn ngày trước",
                                 backgroundColor: kPrimaryColor,
                                 textColor: Colors.white);
                           } else {
@@ -557,8 +557,8 @@ class _Appoin_timeState extends State<Appoin_time> {
                   child: TextField(
                     decoration: InputDecoration(
                       border: OutlineInputBorder(),
-                      labelText: 'Disease Details',
-                      hintText: 'Are You Suffer From?',
+                      labelText: 'Chi tiết bệnh',
+                      hintText: 'Vấn đề bạn đang gặp phải?',
                     ),
                     onChanged: (var name) {
                       disease = name.trim();
@@ -617,7 +617,7 @@ class _Appoin_timeState extends State<Appoin_time> {
                             }
                           : null,
                       child: Text(
-                        'Book Appointment',
+                        'Đặt lịch hẹn',
                         style: TextStyle(
                             color: Colors.white,
                             fontSize: 18,
@@ -830,7 +830,7 @@ Future<void> _displayTextInputDialog(BuildContext context) async {
       context: context,
       builder: (context) {
         return AlertDialog(
-          title: Text('Please enter disease details for further communication'),
+          title: Text('Vui lòng nhập chi tiết bệnh để trao đổi thêm'),
           actions: <Widget>[
             TextButton(
               style: TextButton.styleFrom(
@@ -866,7 +866,7 @@ class AdvanceCustomAlert extends StatelessWidget {
                 child: Column(
                   children: [
                     Text(
-                      'Dr. ' + name,
+                      'Bác sĩ. ' + name,
                       style:
                           TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
                     ),
@@ -874,7 +874,7 @@ class AdvanceCustomAlert extends StatelessWidget {
                       height: 15,
                     ),
                     Text(
-                      'Pending till doctor confirm this appointment request.',
+                      'Đang chờ cho đến khi bác sĩ xác nhận yêu cầu cuộc hẹn này.',
                       style: TextStyle(fontSize: 20),
                       textAlign: TextAlign.center,
                     ),
@@ -901,7 +901,7 @@ class AdvanceCustomAlert extends StatelessWidget {
                               backgroundColor: Colors.green,
                             ),
                             child: Text(
-                              'Pay',
+                              'Thanh toán',
                               style: TextStyle(color: Colors.white),
                             ),
                           ),
@@ -919,7 +919,7 @@ class AdvanceCustomAlert extends StatelessWidget {
                             child: Padding(
                               padding: EdgeInsets.symmetric(horizontal: 19),
                               child: Text(
-                                'Cancel',
+                                'Hủy',
                                 style: TextStyle(color: Colors.white),
                               ),
                             ),

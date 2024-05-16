@@ -122,7 +122,7 @@ class _HomePageState extends State<HomePage> {
       ),
       body: loggedInUser.uid == null
           ? Center(
-              child: Text("Wait for few seconds"),
+              child: Text("Đợi vài giây!"),
             )
           : SingleChildScrollView(
               physics: BouncingScrollPhysics(),
@@ -137,11 +137,7 @@ class _HomePageState extends State<HomePage> {
                     alignment: Alignment.centerLeft,
                     padding: EdgeInsets.only(left: 20, bottom: 10),
                     child: Text(
-                      "Xin Chào " +
-                          loggedInUser.name.toString() +
-                          " " +
-                          _message +
-                          "!",
+                      _message + " " + loggedInUser.name.toString() + "!",
                       style: TextStyle(
                         fontSize: 18,
                         color: kPrimaryColor,
@@ -154,7 +150,7 @@ class _HomePageState extends State<HomePage> {
                     alignment: Alignment.centerLeft,
                     padding: EdgeInsets.only(left: 20, bottom: 15),
                     child: Text(
-                      "Let's Find Your\nDoctor",
+                      "Hãy Tìm\nBác Sĩ Của Bạn",
                       style: TextStyle(
                         fontSize: 35,
                         color: kPrimaryColor,
@@ -178,7 +174,7 @@ class _HomePageState extends State<HomePage> {
                         ),
                         filled: true,
                         fillColor: Colors.grey[200],
-                        hintText: 'Search Doctor',
+                        hintText: 'Tìm Kiếm Bác Sĩ',
                         hintStyle: TextStyle(
                           color: Colors.black26,
                           fontSize: 18,
@@ -233,7 +229,7 @@ class _HomePageState extends State<HomePage> {
                     padding: EdgeInsets.only(left: 23, bottom: 20),
                     alignment: Alignment.centerLeft,
                     child: Text(
-                      "We care for you",
+                      "Chúng tôi quan tâm tới bạn",
                       textAlign: TextAlign.center,
                       style: TextStyle(
                           color: kPrimaryColor,
@@ -252,7 +248,7 @@ class _HomePageState extends State<HomePage> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          'Appointment',
+                          'Cuộc hẹn',
                           style: TextStyle(
                             color: kPrimaryColor,
                             fontSize: 18,
@@ -268,7 +264,7 @@ class _HomePageState extends State<HomePage> {
                             );
                           },
                           child: Text(
-                            'More..',
+                            'Thêm..',
                             style: TextStyle(
                               color: kPrimaryColor,
                               fontSize: 18,
@@ -294,7 +290,7 @@ class _HomePageState extends State<HomePage> {
                               print("snapshot =" + snapshot.toString());
                               return Container(
                                   margin: EdgeInsets.only(left: 10),
-                                  child: Text("Appointment not Available"));
+                                  child: Text("Cuộc hẹn không có sẵn"));
                             } else {
                               ub() {
                                 if (snapshot.data?.docs.length == 0) {
@@ -335,11 +331,11 @@ class _HomePageState extends State<HomePage> {
                                               child: Center(
                                                 child: doc['approve'] == false
                                                     ? Text(
-                                                        "Your appointment with Dr. " +
+                                                        "Cuộc hẹn của bạn với Bác sĩ. " +
                                                             doc['doctor_name'] +
-                                                            " is Pending at  " +
+                                                            " đang chờ xử lý vào ngày " +
                                                             doc['date'] +
-                                                            " and  " +
+                                                            " và  " +
                                                             doc['time']
                                                                 .toString(),
                                                         style: TextStyle(
@@ -350,11 +346,11 @@ class _HomePageState extends State<HomePage> {
                                                                     .bold),
                                                       )
                                                     : Text(
-                                                        " Your confirm appointment with Dr. " +
+                                                        " Cuộc hẹn xác nhận của bạn với Bác sĩ. " +
                                                             doc['doctor_name'] +
-                                                            " is Confirmed at " +
+                                                            " được xác nhận vào ngày " +
                                                             doc['date'] +
-                                                            " and  " +
+                                                            " và  " +
                                                             doc['time']
                                                                 .toString(),
                                                         style: TextStyle(
@@ -403,49 +399,65 @@ class _HomePageState extends State<HomePage> {
     return SizedBox(
       height: 199,
       child: Container(
-          child: StreamBuilder<QuerySnapshot>(
-              stream: firebase.where('valid', isEqualTo: true).snapshots(),
-              builder: (BuildContext context,
-                  AsyncSnapshot<QuerySnapshot> snapshot) {
-                if (!snapshot.hasData) {
-                  return Center(child: Text("Loding.."));
-                } else {
-                  return ListView.builder(
-                    shrinkWrap: true,
-                    scrollDirection: Axis.horizontal,
-                    itemCount: snapshot.data!.docs.length,
-                    itemBuilder: (BuildContext context, int index) {
-                      final DocumentSnapshot doc = snapshot.data!.docs[index];
-                      return HDCell(
-                        onTap: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => DetailPage(
-                                  uid: doc['uid'],
-                                  name: doc['name'],
-                                  email: doc['email'],
-                                  address: doc['address'],
-                                  experience: doc['experience'],
-                                  specialist: doc['specialist'],
-                                  profileImage: doc['profileImage'],
-                                  description: doc['description'],
-                                  phone: doc['phone'],
-                                  available: doc['available'],
-                                  doctor: _doctorName,
-                                ),
-                              ));
-                        },
-                        name: doc["name"].toString(),
-                        email: doc["email"].toString(),
-                        specialist: doc["specialist"].toString(),
-                        profileImage: doc['profileImage'],
-                        valid: doc['valid'],
-                      );
-                    },
-                  );
-                }
-              })),
+        child: StreamBuilder<QuerySnapshot>(
+            stream: firebase.where('valid', isEqualTo: true).snapshots(),
+            builder:
+                (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
+              if (!snapshot.hasData) {
+                return Center(child: Text("Loading.."));
+              } else {
+                // Lọc các bác sĩ có tên không nằm trong danh sách đã chỉ định
+                var filteredDoctors = snapshot.data!.docs
+                    .where((doc) => ![
+                          'Dipak Patel',
+                          'Kevin Prajapati',
+                          'Harsh Panchal',
+                          'Dishang Rana',
+                          'meet bharucha',
+                          'Dhvanip Palsanawala',
+                          'Harshiv Rana',
+                          'Yash Modi'
+                        ].contains(doc['name']))
+                    .toList();
+
+                return ListView.builder(
+                  shrinkWrap: true,
+                  scrollDirection: Axis.horizontal,
+                  itemCount: filteredDoctors.length,
+                  itemBuilder: (BuildContext context, int index) {
+                    final DocumentSnapshot doc = filteredDoctors[index];
+                    return HDCell(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => DetailPage(
+                              uid: doc['uid'],
+                              name: doc['name'],
+                              email: doc['email'],
+                              address: doc['address'],
+                              experience: doc['experience'],
+                              specialist: doc['specialist'],
+                              profileImage: doc['profileImage'],
+                              description: doc['description'],
+                              phone: doc['phone'],
+                              available: doc['available'],
+                              doctor: _doctorName,
+                            ),
+                          ),
+                        );
+                      },
+                      name: doc["name"].toString(),
+                      email: doc["email"].toString(),
+                      specialist: doc["specialist"].toString(),
+                      profileImage: doc['profileImage'],
+                      valid: doc['valid'],
+                    );
+                  },
+                );
+              }
+            }),
+      ),
     );
   }
 
@@ -460,9 +472,9 @@ class _HomePageState extends State<HomePage> {
             ),
             child: Center(
                 child: Text(
-              "Mr." +
+              "Ông/Bà." +
                   loggedInUser.name.toString() +
-                  " confirm appointmentpon with Dr." +
+                  " xác nhận cuộc hẹn với bác sĩ." +
                   doc['age'] +
                   " on " +
                   doc['date'] +
@@ -489,7 +501,7 @@ class _HomePageState extends State<HomePage> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text(
-              'Categories',
+              'Thể loại',
               style: TextStyle(
                 color: kPrimaryColor,
                 fontSize: 18,
@@ -504,7 +516,7 @@ class _HomePageState extends State<HomePage> {
                 );
               },
               child: Text(
-                'More..',
+                'Thêm..',
                 style: TextStyle(
                   color: kPrimaryColor,
                   fontSize: 18,
@@ -578,34 +590,49 @@ class _HomePageState extends State<HomePage> {
             builder:
                 (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
               if (!snapshot.hasData) {
-                return new Text("Loding..");
+                return new Text("Loading..");
               } else {
+                // Lọc các bác sĩ có tên không nằm trong danh sách đã chỉ định
+                var filteredDoctors = snapshot.data!.docs
+                    .where((doc) => ![
+                          'Dipak Patel',
+                          'Kevin Prajapati',
+                          'Harsh Panchal',
+                          'Dishang Rana',
+                          'meet bharucha',
+                          'Dhvanip Palsanawala',
+                          'Harshiv Rana',
+                          'Yash Modi'
+                        ].contains(doc['name']))
+                    .toList();
+
                 return ListView.builder(
                   shrinkWrap: true,
                   physics: NeverScrollableScrollPhysics(),
                   scrollDirection: Axis.vertical,
-                  itemCount: 8,
+                  itemCount: filteredDoctors.length,
                   itemBuilder: (BuildContext context, int index) {
-                    final DocumentSnapshot doc = snapshot.data!.docs[index];
+                    final DocumentSnapshot doc = filteredDoctors[index];
                     return TrdCell(
                       onTap: () {
                         Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => DetailPage(
-                                uid: doc['uid'],
-                                name: doc['name'],
-                                email: doc['email'],
-                                address: doc['address'],
-                                experience: doc['experience'],
-                                specialist: doc['specialist'],
-                                profileImage: doc['profileImage'],
-                                description: doc['description'],
-                                available: doc['available'],
-                                phone: doc['phone'],
-                                doctor: null,
-                              ),
-                            ));
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => DetailPage(
+                              uid: doc['uid'],
+                              name: doc['name'],
+                              email: doc['email'],
+                              address: doc['address'],
+                              experience: doc['experience'],
+                              specialist: doc['specialist'],
+                              profileImage: doc['profileImage'],
+                              description: doc['description'],
+                              phone: doc['phone'],
+                              available: doc['available'],
+                              doctor: null,
+                            ),
+                          ),
+                        );
                       },
                       name: doc["name"].toString(),
                       email: doc["email"].toString(),
@@ -631,9 +658,11 @@ class _HomePageState extends State<HomePage> {
               onTap: () {
                 if (doc['available'].toString() == false) {
                   Fluttertoast.showToast(
-                      msg: "Dr. " +
+                      msg: "Bác sĩ. " +
                           doc['name'] +
-                          " is not available...Visit later",
+                          " đang bận...Vui lòng liên hệ " +
+                          doc['phone'] +
+                          ' để kết nối với bác sĩ',
                       textColor: Colors.white,
                       backgroundColor: kPrimaryColor);
                 }
@@ -673,7 +702,7 @@ class _HomePageState extends State<HomePage> {
     ));
     categories.add(Category(
       icon: "assets/svg/ear.png",
-      title: 'Ear',
+      title: 'Ears',
     ));
     categories.add(Category(
       icon: "assets/svg/eye.png",
@@ -737,7 +766,7 @@ dialog(BuildContext context) => showDialog(
                   child: Column(
                     children: [
                       Text(
-                        'Doctor Rating',
+                        'Đánh giá',
                         style: TextStyle(
                             fontWeight: FontWeight.bold, fontSize: 20),
                       ),

@@ -47,7 +47,7 @@ class _SearchList3State extends State<SearchList3> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
-                            'No Appointment Found!',
+                            'Không có cuộc hẹn nào!',
                             style: TextStyle(
                               color: Colors.blue[800],
                               fontSize: 25,
@@ -97,7 +97,7 @@ class _SearchList3State extends State<SearchList3> {
                                           MainAxisAlignment.center,
                                       children: [
                                         Text(
-                                          'Name: ' + pending['name'],
+                                          'Tên: ' + pending['name'],
                                           style: TextStyle(
                                             fontWeight: FontWeight.bold,
                                             fontSize: 17,
@@ -106,21 +106,21 @@ class _SearchList3State extends State<SearchList3> {
                                         ),
                                         SizedBox(height: 2),
                                         Text(
-                                          'Date: ' + pending['date'],
+                                          'Ngày: ' + pending['date'],
                                           style: TextStyle(
                                               fontSize: 16,
                                               color: Colors.black54),
                                         ),
                                         SizedBox(height: 2),
                                         Text(
-                                          'Time: ' + pending['time'],
+                                          'Thời gian: ' + pending['time'],
                                           style: TextStyle(
                                               fontSize: 16,
                                               color: Colors.black54),
                                         ),
                                         SizedBox(height: 2),
                                         Text(
-                                          'Status: Visited',
+                                          'Trạng thái: Đã ghé thăm',
                                           style: TextStyle(
                                               fontSize: 16,
                                               color: Colors.black54),

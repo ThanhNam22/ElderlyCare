@@ -191,7 +191,7 @@ class _Patient_RecentListState extends State<Patient_RecentList> {
                                                           decoration:
                                                               BoxDecoration(),
                                                           child: Text(
-                                                            "Dr. " +
+                                                            "Bác sĩ. " +
                                                                 doc['doctor_name'],
                                                             style: TextStyle(
                                                                 color: Colors
@@ -214,7 +214,7 @@ class _Patient_RecentListState extends State<Patient_RecentList> {
                                                           decoration:
                                                               BoxDecoration(),
                                                           child: Text(
-                                                            "Date: " +
+                                                            "Ngày: " +
                                                                 doc['date'],
                                                             style: TextStyle(
                                                                 color: Colors
@@ -234,7 +234,7 @@ class _Patient_RecentListState extends State<Patient_RecentList> {
                                                           decoration:
                                                               BoxDecoration(),
                                                           child: Text(
-                                                            "Time: " +
+                                                            "Thời gian: " +
                                                                 doc['time'],
                                                             style: TextStyle(
                                                                 color: Colors
@@ -250,7 +250,7 @@ class _Patient_RecentListState extends State<Patient_RecentList> {
                                                       ),
                                                       Container(
                                                         child: Text(
-                                                          "Status : Not Visited",
+                                                          "Trạng thái : Không ghe thăm",
                                                           style: TextStyle(
                                                               color:
                                                                   Colors.white,
@@ -279,7 +279,7 @@ class _Patient_RecentListState extends State<Patient_RecentList> {
                                                           decoration:
                                                               BoxDecoration(),
                                                           child: Text(
-                                                            "Dr. " +
+                                                            "Bác sĩ. " +
                                                                 doc['doctor_name'],
                                                             style: TextStyle(
                                                                 color: Colors
@@ -302,7 +302,7 @@ class _Patient_RecentListState extends State<Patient_RecentList> {
                                                           decoration:
                                                               BoxDecoration(),
                                                           child: Text(
-                                                            "Date: " +
+                                                            "Ngày: " +
                                                                 doc['date'],
                                                             style: TextStyle(
                                                                 color: Colors
@@ -322,7 +322,7 @@ class _Patient_RecentListState extends State<Patient_RecentList> {
                                                           decoration:
                                                               BoxDecoration(),
                                                           child: Text(
-                                                            "Time: " +
+                                                            "Thời gian: " +
                                                                 doc['time'],
                                                             style: TextStyle(
                                                                 color: Colors
@@ -338,7 +338,7 @@ class _Patient_RecentListState extends State<Patient_RecentList> {
                                                       ),
                                                       Container(
                                                         child: Text(
-                                                          "Status : Visited",
+                                                          "Trạng thái : Đã ghé thăm",
                                                           style: TextStyle(
                                                               color:
                                                                   Colors.white,

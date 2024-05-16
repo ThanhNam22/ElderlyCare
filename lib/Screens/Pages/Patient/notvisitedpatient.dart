@@ -76,7 +76,7 @@ class _notvisitedState extends State<notvisited> {
               Navigator.pop(context);
             }),
         title: Text(
-          'Pending Elderlys',
+          'Bệnh nhân đang chờ xử lý',
           style: TextStyle(
             color: Colors.white,
             fontSize: 20,
@@ -94,7 +94,7 @@ class _notvisitedState extends State<notvisited> {
                     height: size.height * 1,
                     child: Padding(
                       padding: const EdgeInsets.only(bottom: 300),
-                      child: Center(child: Text("Appointment not available")),
+                      child: Center(child: Text("Cuộc hẹn không có sẵn")),
                     ));
               } else {
                 return isLoading
@@ -119,7 +119,7 @@ class _notvisitedState extends State<notvisited> {
                               padding: const EdgeInsets.symmetric(
                                   horizontal: 8, vertical: 3),
                               child: Container(
-                                height: 122,
+                                height: 140,
                                 child: Card(
                                   shape: RoundedRectangleBorder(
                                     borderRadius:
@@ -142,7 +142,7 @@ class _notvisitedState extends State<notvisited> {
                                                       const EdgeInsets.only(
                                                           left: 8.0, top: 8.0),
                                                   child: Text(
-                                                    'Name: ' + doc['name'],
+                                                    'Họ tên: ' + doc['name'],
                                                     style: TextStyle(
                                                         color: Colors.black,
                                                         fontSize: 20,
@@ -160,7 +160,7 @@ class _notvisitedState extends State<notvisited> {
                                                       const EdgeInsets.only(
                                                           left: 8.0),
                                                   child: Text(
-                                                    "Date: " + doc['date'],
+                                                    "Ngày: " + doc['date'],
                                                     style: TextStyle(
                                                         color: Colors.black87,
                                                         fontSize: 14,
@@ -177,7 +177,7 @@ class _notvisitedState extends State<notvisited> {
                                                       const EdgeInsets.only(
                                                           left: 8.0, top: 4),
                                                   child: Text(
-                                                    "Time: " + doc['time'],
+                                                    "Thời gian: " + doc['time'],
                                                     style: TextStyle(
                                                         color: Colors.black87,
                                                         fontSize: 14,
@@ -194,7 +194,7 @@ class _notvisitedState extends State<notvisited> {
                                                       const EdgeInsets.only(
                                                           left: 8.0, top: 4),
                                                   child: Text(
-                                                    "Status : Pending",
+                                                    "Trạng thái : Chưa xác nhận",
                                                     style: TextStyle(
                                                         color: Colors.black87,
                                                         fontSize: 14,
@@ -211,7 +211,7 @@ class _notvisitedState extends State<notvisited> {
                                                       const EdgeInsets.only(
                                                           left: 8.0, top: 4),
                                                   child: Text(
-                                                    "Payment : Success",
+                                                    "Thanh toán : Đã thanh toán",
                                                     style: TextStyle(
                                                         color: Colors.black87,
                                                         fontSize: 14,
@@ -249,7 +249,7 @@ class _notvisitedState extends State<notvisited> {
                                                 padding: const EdgeInsets.only(
                                                     top: 10.0, bottom: 10),
                                                 child: Text(
-                                                  "Visited",
+                                                  "Đã ghé thăm",
                                                   style: TextStyle(
                                                       color: Colors.white,
                                                       fontWeight:
@@ -286,7 +286,7 @@ class _notvisitedState extends State<notvisited> {
                                                 padding: const EdgeInsets.only(
                                                     top: 10.0, bottom: 10),
                                                 child: Text(
-                                                  "Not Visited",
+                                                  "Chưa ghé thăm",
                                                   style: TextStyle(
                                                       color: Colors.white,
                                                       fontWeight:
@@ -333,7 +333,7 @@ class alertdialog extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.only(top: 48),
                     child: Text(
-                      'Are you sure this patient not visited yet?',
+                      'Bạn có chắc bệnh nhân này chưa đến thăm?',
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 20,
@@ -351,7 +351,7 @@ class alertdialog extends StatelessWidget {
                             Navigator.of(context).pop();
                           },
                           child: Text(
-                            'No',
+                            'Không',
                             style: TextStyle(
                                 color: Colors.white,
                                 fontWeight: FontWeight.bold),
@@ -379,7 +379,7 @@ class alertdialog extends StatelessWidget {
                             child: Padding(
                               padding: EdgeInsets.symmetric(horizontal: 19),
                               child: Text(
-                                'Yes',
+                                'Có',
                                 style: TextStyle(
                                     color: Colors.white,
                                     fontWeight: FontWeight.bold),
@@ -438,7 +438,7 @@ class confirm extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.only(top: 48),
                     child: Text(
-                      'Are you sure this patient visited?',
+                      'Bạn có chắc bệnh nhân này đã đến thăm?',
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 20,
@@ -456,7 +456,7 @@ class confirm extends StatelessWidget {
                             Navigator.of(context).pop();
                           },
                           child: Text(
-                            'No',
+                            'Không',
                             style: TextStyle(
                                 color: Colors.white,
                                 fontWeight: FontWeight.bold),
@@ -486,7 +486,7 @@ class confirm extends StatelessWidget {
                             child: Padding(
                               padding: EdgeInsets.symmetric(horizontal: 19),
                               child: Text(
-                                'Yes',
+                                'Có',
                                 style: TextStyle(
                                     color: Colors.white,
                                     fontWeight: FontWeight.bold),

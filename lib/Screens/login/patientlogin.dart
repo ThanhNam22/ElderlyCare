@@ -126,7 +126,7 @@ class _login_pageState extends State<login_page> {
                           Container(
                             child: Center(
                                 child: Text(
-                              "User Login",
+                              "Đăng Nhập Người Dùng",
                               style: TextStyle(
                                   fontSize: 22,
                                   color: Colors.black,
@@ -156,7 +156,7 @@ class _login_pageState extends State<login_page> {
                               keyboardType: TextInputType.emailAddress,
                               cursorColor: kPrimaryColor,
                               decoration: buildInputDecoration(
-                                  Icons.email, "Your Email "),
+                                  Icons.email, "Email của bạn "),
                               onChanged: (email) {
                                 t_email = email.trim();
                               },
@@ -164,7 +164,7 @@ class _login_pageState extends State<login_page> {
                                 if (isEmailValid(email!))
                                   return null;
                                 else
-                                  return 'Enter a valid email address';
+                                  return 'Nhập địa chỉ email hợp lệ';
                               },
                               onSaved: (var email) {
                                 t_email = email.toString().trim();
@@ -225,10 +225,10 @@ class _login_pageState extends State<login_page> {
                                       width: 2,
                                     ),
                                   ),
-                                  hintText: "Password"),
+                                  hintText: "Mật khẩu"),
                               validator: (var value) {
                                 if (value!.isEmpty) {
-                                  return "Enter Your Password";
+                                  return "Nhập mật khẩu của bạn";
                                 }
                                 return null;
                               },
@@ -341,7 +341,8 @@ class _login_pageState extends State<login_page> {
                                               .then((uid) => {
                                                     print("Login Successful"),
                                                     Fluttertoast.showToast(
-                                                        msg: "Login Successful",
+                                                        msg:
+                                                            "Đăng nhập thành công",
                                                         toastLength:
                                                             Toast.LENGTH_SHORT,
                                                         gravity:
@@ -369,7 +370,7 @@ class _login_pageState extends State<login_page> {
                                     }
                                   },
                                   child: Text(
-                                    'Login',
+                                    'Đăng nhập',
                                     style: TextStyle(
                                         color: Colors.white,
                                         fontSize: 18,
@@ -395,7 +396,7 @@ class _login_pageState extends State<login_page> {
                                   }
                                 },
                                 child: Text(
-                                  "Forget Password ?",
+                                  "Quên mật khẩu ?",
                                   style: TextStyle(
                                       color: kPrimaryColor,
                                       fontSize: 14,
@@ -426,7 +427,7 @@ class _login_pageState extends State<login_page> {
                                     children: [
                                       Center(
                                         child: Text(
-                                          "Don't have an account?",
+                                          "Bạn chưa có tài khoản?",
                                           style: TextStyle(
                                               color: Colors.black26,
                                               fontSize: 14),
@@ -450,7 +451,7 @@ class _login_pageState extends State<login_page> {
                                           }
                                         },
                                         child: Text(
-                                          " Create New Account",
+                                          " Tạo tài khoản mới",
                                           style: TextStyle(
                                               color: kPrimaryColor,
                                               fontSize: 14,
@@ -478,7 +479,7 @@ class _login_pageState extends State<login_page> {
       await auth
           .signInWithEmailAndPassword(email: email, password: password)
           .then((uid) => {
-                print("Login Successful"),
+                print("Đăng nhập thành công"),
                 Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(builder: (context) => HomePage()),

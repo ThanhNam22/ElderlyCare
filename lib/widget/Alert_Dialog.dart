@@ -19,7 +19,7 @@ class AdvanceCustomAlert extends StatelessWidget {
                       height: 15,
                     ),
                     Text(
-                      'Turn on Internet Connection.',
+                      'Bật kết nối Internet.',
                       style:
                           TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                       textAlign: TextAlign.center,

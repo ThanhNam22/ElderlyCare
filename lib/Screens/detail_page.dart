@@ -141,9 +141,9 @@ class _DetailPageState extends State<DetailPage> {
                               AsyncSnapshot<QuerySnapshot> snapshot) {
                             if (widget.available == false) {
                               Fluttertoast.showToast(
-                                  msg: "Dr. " +
+                                  msg: "Bác sĩ. " +
                                       widget.name +
-                                      " is not available...Visit later",
+                                      " đang bận ... Vui lòng trở lại vào lúc khác",
                                   textColor: Colors.white,
                                   backgroundColor: kPrimaryColor);
                             }
@@ -230,7 +230,7 @@ class _DetailPageState extends State<DetailPage> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'Dr. ' + widget.name,
+                          'Bác sĩ. ' + widget.name,
                           style: TextStyle(
                             color: Colors.black,
                             fontSize: 22,
@@ -251,7 +251,7 @@ class _DetailPageState extends State<DetailPage> {
                             borderRadius: BorderRadius.circular(4),
                           ),
                           child: Text(
-                            widget.specialist + ' Specialist',
+                            'Chuyên khoa' + widget.specialist,
                             style: TextStyle(
                               color: HexColor('#FFBF11'),
                               fontSize: 11,
@@ -312,7 +312,7 @@ class _DetailPageState extends State<DetailPage> {
                                           CrossAxisAlignment.start,
                                       children: [
                                         Text(
-                                          "Write a Review",
+                                          "Viết đánh giá",
                                           style: TextStyle(color: Colors.green),
                                         ),
                                         Row(
@@ -337,7 +337,7 @@ class _DetailPageState extends State<DetailPage> {
                                 ),
                               )
                             : Text(
-                                'Update Review',
+                                'Đánh giá',
                                 style: TextStyle(color: Colors.green),
                               ),
                         SizedBox(
@@ -440,7 +440,7 @@ class _DetailPageState extends State<DetailPage> {
                           // crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              'Rating & Review',
+                              'Xếp hạng và đánh giá',
                               style: TextStyle(
                                 color: kPrimaryColor,
                                 fontSize: 18,
@@ -457,7 +457,7 @@ class _DetailPageState extends State<DetailPage> {
                                 );
                               },
                               child: Text(
-                                'More..',
+                                'Thêm..',
                                 style: TextStyle(
                                   color: kPrimaryColor,
                                   fontSize: 18,
@@ -618,7 +618,7 @@ class _DetailPageState extends State<DetailPage> {
                                   margin: EdgeInsets.only(left: 5, right: 5),
                                   padding: EdgeInsets.all(10.0),
                                   child: Text(
-                                    "Cancel",
+                                    "Hủy",
                                     style: TextStyle(
                                         color: Colors.white,
                                         fontWeight: FontWeight.w600),
@@ -654,7 +654,7 @@ class _DetailPageState extends State<DetailPage> {
                                         child: Padding(
                                           padding: const EdgeInsets.all(10.0),
                                           child: Text(
-                                            "Appointment",
+                                            "Cuộc hẹn",
                                             style: TextStyle(
                                                 color: Colors.white,
                                                 fontWeight: FontWeight.w600),
@@ -672,9 +672,9 @@ class _DetailPageState extends State<DetailPage> {
                                       ),
                                       onPressed: () {
                                         Fluttertoast.showToast(
-                                            msg: "Dr. " +
+                                            msg: "Bác sĩ. " +
                                                 widget.name +
-                                                " is not available...Visit later",
+                                                " đang bận ... Vui lòng trở lại sau!",
                                             textColor: Colors.white,
                                             backgroundColor: kPrimaryColor);
                                         ;
@@ -685,7 +685,7 @@ class _DetailPageState extends State<DetailPage> {
                                         child: Padding(
                                           padding: const EdgeInsets.all(10.0),
                                           child: Text(
-                                            "Appointment",
+                                            "Cuộc hẹn",
                                             style: TextStyle(
                                                 color: Colors.white,
                                                 fontWeight: FontWeight.w600),
@@ -906,7 +906,7 @@ class _DetailPageState extends State<DetailPage> {
                         Padding(
                           padding: const EdgeInsets.only(top: 10.0),
                           child: Text(
-                            'Doctor Rating',
+                            'Đánh giá',
                             style: TextStyle(
                                 fontWeight: FontWeight.bold, fontSize: 20),
                           ),
@@ -924,9 +924,9 @@ class _DetailPageState extends State<DetailPage> {
                             // controller: reviewController,
                             decoration: InputDecoration(
                               border: OutlineInputBorder(),
-                              labelText: 'Review',
-                              hintText: 'Review',
-                              errorText: _validate ? 'Enter Review' : null,
+                              labelText: 'Đánh giá',
+                              hintText: 'Đánh giá',
+                              errorText: _validate ? 'Nhập đánh giá' : null,
                             ),
                             onChanged: (var name) {
                               reviewController = name.trim();
@@ -948,7 +948,7 @@ class _DetailPageState extends State<DetailPage> {
                                   style: ElevatedButton.styleFrom(
                                       backgroundColor: Colors.red),
                                   child: Text(
-                                    'CANCEL',
+                                    'Hủy',
                                     style: TextStyle(
                                         color: Colors.white,
                                         fontWeight: FontWeight.bold),
@@ -1032,7 +1032,7 @@ class _DetailPageState extends State<DetailPage> {
                         Padding(
                           padding: const EdgeInsets.only(top: 10.0),
                           child: Text(
-                            'Doctor Rating',
+                            'Đánh giá',
                             style: TextStyle(
                                 fontWeight: FontWeight.bold, fontSize: 20),
                           ),
@@ -1065,9 +1065,10 @@ class _DetailPageState extends State<DetailPage> {
                             //  controller: reviewController,
                             decoration: InputDecoration(
                               border: OutlineInputBorder(),
-                              labelText: 'Review',
-                              hintText: 'Review',
-                              errorText: _validate ? 'Enter Review' : null,
+                              labelText: 'Đánh giá',
+                              hintText: 'Đánh giá',
+                              errorText:
+                                  _validate ? 'Nhập đánh giá của bạn' : null,
                             ),
                             onChanged: (var name) {
                               reviewController = name.trim();
@@ -1088,7 +1089,7 @@ class _DetailPageState extends State<DetailPage> {
                                   style: ElevatedButton.styleFrom(
                                       backgroundColor: Colors.red),
                                   child: Text(
-                                    'CANCEL',
+                                    'Hủy',
                                     style: TextStyle(
                                         color: Colors.white,
                                         fontWeight: FontWeight.bold),

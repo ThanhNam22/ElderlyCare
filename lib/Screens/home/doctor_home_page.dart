@@ -92,11 +92,11 @@ class _DocHomePageState extends State<DocHomePage> {
     setState(
       () {
         if (hour >= 5 && hour < 12) {
-          _message = 'Good Morning';
+          _message = 'Chào buổi sáng';
         } else if (hour >= 12 && hour <= 17) {
-          _message = 'Good Afternoon';
+          _message = 'Chào buổi chiều';
         } else {
-          _message = 'Good Evening';
+          _message = 'Chào buổi tối';
         }
       },
     );
@@ -113,7 +113,7 @@ class _DocHomePageState extends State<DocHomePage> {
       ),
       body: loggedInUser.uid == null
           ? Center(
-              child: Text("Wait for few seconds"),
+              child: Text("Đợi vài giây!"),
             )
           : SingleChildScrollView(
               physics: BouncingScrollPhysics(),
@@ -128,10 +128,11 @@ class _DocHomePageState extends State<DocHomePage> {
                     alignment: Alignment.centerLeft,
                     padding: EdgeInsets.only(left: 20, bottom: 10),
                     child: Text(
-                      "Hello \nDr. " +
-                          loggedInUser.name.toString() +
+                      _message +
                           "\n" +
-                          _message,
+                          " Bác sĩ. " +
+                          loggedInUser.name.toString() +
+                          "!",
                       style: TextStyle(
                         fontSize: 32,
                         color: kPrimaryColor,
@@ -153,7 +154,7 @@ class _DocHomePageState extends State<DocHomePage> {
                         ),
                         filled: true,
                         fillColor: Colors.grey[200],
-                        hintText: 'Search Patient',
+                        hintText: 'Tìm kiếm bệnh nhân',
                         hintStyle: TextStyle(
                           color: Colors.black26,
                           fontSize: 18,
@@ -195,7 +196,7 @@ class _DocHomePageState extends State<DocHomePage> {
                     alignment: Alignment.centerLeft,
                     padding: EdgeInsets.only(left: 20, bottom: 10),
                     child: Text(
-                      "Your's Today Appointments : ",
+                      "Cuộc hẹn hôm nay của bạn : ",
                       style: TextStyle(
                         fontSize: 24,
                         color: Colors.black,
@@ -217,7 +218,7 @@ class _DocHomePageState extends State<DocHomePage> {
                                 padding: const EdgeInsets.only(bottom: 300),
                                 child: Center(
                                     child: Text(
-                                        "You Do Not Have An Appointment today.")),
+                                        "Hôm nay bạn không có cuộc hẹn nào.")),
                               ));
                         } else {
                           return isLoading
@@ -244,7 +245,7 @@ class _DocHomePageState extends State<DocHomePage> {
                                         padding: const EdgeInsets.symmetric(
                                             horizontal: 8, vertical: 3),
                                         child: Container(
-                                          height: 145,
+                                          height: 165,
                                           child: Card(
                                             shape: RoundedRectangleBorder(
                                               borderRadius: BorderRadius.all(
@@ -272,7 +273,7 @@ class _DocHomePageState extends State<DocHomePage> {
                                                                     left: 8.0,
                                                                     top: 8.0),
                                                             child: Text(
-                                                              'Name: ' +
+                                                              'Tên: ' +
                                                                   doc['name'],
                                                               style: TextStyle(
                                                                   color: Colors
@@ -298,7 +299,7 @@ class _DocHomePageState extends State<DocHomePage> {
                                                                     .only(
                                                                     left: 8.0),
                                                             child: Text(
-                                                              "Date: " +
+                                                              "Ngày: " +
                                                                   doc['date'],
                                                               style: TextStyle(
                                                                   color: Colors
@@ -322,7 +323,7 @@ class _DocHomePageState extends State<DocHomePage> {
                                                                     left: 8.0,
                                                                     top: 4),
                                                             child: Text(
-                                                              "Time: " +
+                                                              "Thời gian: " +
                                                                   doc['time'],
                                                               style: TextStyle(
                                                                   color: Colors
@@ -346,7 +347,7 @@ class _DocHomePageState extends State<DocHomePage> {
                                                                     left: 8.0,
                                                                     top: 4),
                                                             child: Text(
-                                                              "Status: Pending",
+                                                              "Trạng thái: Chưa xác nhận",
                                                               style: TextStyle(
                                                                   color: Colors
                                                                       .black87,
@@ -369,7 +370,7 @@ class _DocHomePageState extends State<DocHomePage> {
                                                                     left: 8.0,
                                                                     top: 4),
                                                             child: Text(
-                                                              "Payment: Success",
+                                                              "Thanh toán: Đã thanh toán",
                                                               style: TextStyle(
                                                                   color: Colors
                                                                       .black87,
@@ -392,7 +393,7 @@ class _DocHomePageState extends State<DocHomePage> {
                                                                     left: 8.0,
                                                                     top: 4),
                                                             child: Text(
-                                                              "Details: " +
+                                                              "Chi tiết: " +
                                                                   doc['diseasedetails'],
                                                               style: TextStyle(
                                                                   color: Colors
@@ -520,6 +521,7 @@ class _DocHomePageState extends State<DocHomePage> {
   }
 }
 
+// ignore: must_be_immutable
 class alertdialog extends StatelessWidget {
   var id;
 
@@ -541,7 +543,7 @@ class alertdialog extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.only(top: 45),
                     child: Text(
-                      'Are you sure you want to cancel this appointment?',
+                      'Bạn có chắc chắn muốn hủy cuộc hẹn này không?',
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 20,
@@ -559,7 +561,7 @@ class alertdialog extends StatelessWidget {
                             Navigator.of(context).pop();
                           },
                           child: Text(
-                            'No',
+                            'Không',
                             style: TextStyle(
                                 color: Colors.white,
                                 fontWeight: FontWeight.bold),
@@ -587,7 +589,7 @@ class alertdialog extends StatelessWidget {
                             child: Padding(
                               padding: EdgeInsets.symmetric(horizontal: 19),
                               child: Text(
-                                'Yes',
+                                'Có',
                                 style: TextStyle(
                                     color: Colors.white,
                                     fontWeight: FontWeight.bold),
@@ -625,6 +627,7 @@ class alertdialog extends StatelessWidget {
   }
 }
 
+// ignore: must_be_immutable
 class confirm extends StatelessWidget {
   var id;
 
@@ -646,7 +649,7 @@ class confirm extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.only(top: 45),
                     child: Text(
-                      'Are you sure you want to confirm this appointment?',
+                      'Bạn có chắc chắn muốn xác nhận cuộc hẹn này không?',
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 20,
@@ -664,7 +667,7 @@ class confirm extends StatelessWidget {
                             Navigator.of(context).pop();
                           },
                           child: Text(
-                            'No',
+                            'Không',
                             style: TextStyle(
                                 color: Colors.white,
                                 fontWeight: FontWeight.bold),
@@ -694,7 +697,7 @@ class confirm extends StatelessWidget {
                             child: Padding(
                               padding: EdgeInsets.symmetric(horizontal: 19),
                               child: Text(
-                                'Yes',
+                                'Có',
                                 style: TextStyle(
                                     color: Colors.white,
                                     fontWeight: FontWeight.bold),

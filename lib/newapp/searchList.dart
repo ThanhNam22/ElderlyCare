@@ -51,7 +51,7 @@ class _SearchListState extends State<SearchList> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
-                            'No Doctor Found!',
+                            'Không có bác sĩ nào!',
                             style: TextStyle(
                               color: Colors.blue[800],
                               fontSize: 25,
@@ -136,7 +136,7 @@ class _SearchListState extends State<SearchList> {
                                           MainAxisAlignment.center,
                                       children: [
                                         Text(
-                                          'Dr. ' + doctor['name'],
+                                          'Bác sĩ. ' + doctor['name'],
                                           style: TextStyle(
                                             fontWeight: FontWeight.bold,
                                             fontSize: 17,
@@ -144,7 +144,7 @@ class _SearchListState extends State<SearchList> {
                                           ),
                                         ),
                                         Text(
-                                          doctor['specialist'] + ' Specialist',
+                                          'Chuyên khoa' + doctor['specialist'],
                                           style: TextStyle(
                                               fontSize: 16,
                                               color: Colors.black54),

@@ -39,7 +39,7 @@ class _labState extends State<lab> {
                 Navigator.pop(context);
               }),
           title: Text(
-            'Pathology Laboratory',
+            'Phòng thí nghiệm bệnh lý',
             style: TextStyle(
               color: Colors.white,
               fontSize: 20,

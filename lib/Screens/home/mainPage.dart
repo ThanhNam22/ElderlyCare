@@ -159,21 +159,21 @@ class _MainPageState extends State<MainPage> {
                   GButton(
                     iconSize: _selectedIndex == 1 ? 30 : 27,
                     icon: Icons.medical_services,
-                    text: 'Disease',
+                    text: 'Bệnh lý',
                   ),
                   GButton(
                     iconSize: 28,
                     icon: _selectedIndex == 2
                         ? Typicons.calendar
                         : Typicons.calendar_outline,
-                    text: 'Schedul',
+                    text: 'Lịch trình',
                   ),
                   GButton(
                     iconSize: 29,
                     icon: _selectedIndex == 3
                         ? Typicons.user
                         : Typicons.user_outline,
-                    text: 'Profile',
+                    text: 'Thông tin cá nhân',
                   ),
                 ],
                 selectedIndex: _selectedIndex,

@@ -83,7 +83,7 @@ class _DiseaseDetailState extends State<DiseaseDetail> {
                                 Padding(
                                   padding: const EdgeInsets.only(top: 10.0),
                                   child: Text(
-                                    'How does it spread?',
+                                    'Nó lây lan như thế nào?',
                                     style: TextStyle(
                                         color: Colors.black87,
                                         fontSize: 18,
@@ -123,7 +123,7 @@ class _DiseaseDetailState extends State<DiseaseDetail> {
                                 Padding(
                                   padding: const EdgeInsets.only(top: 10.0),
                                   child: Text(
-                                    'Symtomps',
+                                    'Triệu chứng',
                                     style: TextStyle(
                                         color: Colors.black87,
                                         fontSize: 18,
@@ -163,7 +163,7 @@ class _DiseaseDetailState extends State<DiseaseDetail> {
                                 Padding(
                                   padding: const EdgeInsets.only(top: 10.0),
                                   child: Text(
-                                    'Warning Signs - Seek medical attention',
+                                    'Dấu hiệu cảnh báo - Tìm kiếm sự chăm sóc y tế',
                                     style: TextStyle(
                                         color: Colors.black87,
                                         fontSize: 18,

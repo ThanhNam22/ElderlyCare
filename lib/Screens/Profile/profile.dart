@@ -137,7 +137,7 @@ class _Profile_pageState extends State<Profile_page> {
               Navigator.pop(context);
             },
           ),
-          title: Text('Profile'),
+          title: Text('Thông tin cá nhân'),
         ),
         body: isLoading
             ? Loading()
@@ -162,6 +162,25 @@ class _Profile_pageState extends State<Profile_page> {
                                           backgroundImage: AssetImage(
                                               'assets/images/account.png'),
                                           radius: 50,
+                                          child: Padding(
+                                            padding: const EdgeInsets.all(3.0),
+                                            child: file == null
+                                                ? InkWell(
+                                                    onTap: () {
+                                                      chooseImage();
+                                                    },
+                                                    child: CircleAvatar(
+                                                      radius: 50.00,
+                                                      backgroundImage: AssetImage(
+                                                          "assets/images/account.png"),
+                                                    ),
+                                                  )
+                                                : CircleAvatar(
+                                                    radius: 50.00,
+                                                    backgroundImage:
+                                                        FileImage(file),
+                                                  ),
+                                          ),
                                         )
                                       : Container(
                                           child: InkWell(
@@ -208,7 +227,7 @@ class _Profile_pageState extends State<Profile_page> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: <Widget>[
                             Text(
-                              "First Name",
+                              "Họ",
                               style: TextStyle(
                                   color: kPrimaryColor,
                                   fontWeight: FontWeight.w600),
@@ -235,7 +254,7 @@ class _Profile_pageState extends State<Profile_page> {
                                 },
                                 validator: (var value) {
                                   if (value!.isEmpty) {
-                                    return "Enter Your First Name";
+                                    return "Nhập tên của bạn";
                                   }
                                   return null;
                                 },
@@ -254,7 +273,7 @@ class _Profile_pageState extends State<Profile_page> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: <Widget>[
                             Text(
-                              "Last Name",
+                              "Tên",
                               style: TextStyle(
                                   color: kPrimaryColor,
                                   fontWeight: FontWeight.w600),
@@ -281,7 +300,7 @@ class _Profile_pageState extends State<Profile_page> {
                                 },
                                 validator: (var value) {
                                   if (value!.isEmpty) {
-                                    return "Enter Your last name";
+                                    return "Nhập tên của bạn";
                                   }
                                   return null;
                                 },
@@ -339,7 +358,7 @@ class _Profile_pageState extends State<Profile_page> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: <Widget>[
                             Text(
-                              "address",
+                              "Địa chỉ",
                               style: TextStyle(
                                   color: kPrimaryColor,
                                   fontWeight: FontWeight.w600),
@@ -366,7 +385,7 @@ class _Profile_pageState extends State<Profile_page> {
                                 },
                                 validator: (var value) {
                                   if (value!.isEmpty) {
-                                    return "Enter Your Address";
+                                    return "Nhập địa chỉ của bạn";
                                   }
                                   return null;
                                 },
@@ -389,7 +408,7 @@ class _Profile_pageState extends State<Profile_page> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: <Widget>[
                             Text(
-                              "Date Of Birth",
+                              "Ngày sinh",
                               style: TextStyle(
                                   color: kPrimaryColor,
                                   fontWeight: FontWeight.w600),
@@ -459,7 +478,7 @@ class _Profile_pageState extends State<Profile_page> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: <Widget>[
                             Text(
-                              "Age",
+                              "Tuổi",
                               style: TextStyle(
                                   color: kPrimaryColor,
                                   fontWeight: FontWeight.w600),
@@ -486,7 +505,7 @@ class _Profile_pageState extends State<Profile_page> {
                                 },
                                 validator: (var value) {
                                   if (value!.isEmpty) {
-                                    return "Enter Your Age";
+                                    return "Nhập tuổi của bạn";
                                   }
                                   return null;
                                 },
@@ -508,7 +527,7 @@ class _Profile_pageState extends State<Profile_page> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: <Widget>[
                             Text(
-                              "Gender",
+                              "Giới tính",
                               style: TextStyle(
                                   color: kPrimaryColor,
                                   fontWeight: FontWeight.w600),
@@ -540,7 +559,7 @@ class _Profile_pageState extends State<Profile_page> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: <Widget>[
                             Text(
-                              "Contact No",
+                              "Số điện thoại",
                               style: TextStyle(
                                   color: kPrimaryColor,
                                   fontWeight: FontWeight.w600),
@@ -585,7 +604,7 @@ class _Profile_pageState extends State<Profile_page> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: <Widget>[
                             Text(
-                              "status",
+                              "Tình trạng hôn nhân",
                               style: TextStyle(
                                   color: kPrimaryColor,
                                   fontWeight: FontWeight.w600),
@@ -676,7 +695,7 @@ class _Profile_pageState extends State<Profile_page> {
                             }
                           },
                           child: Text(
-                            'Update Profile',
+                            'Cập nhật hồ sơ',
                             style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 18,

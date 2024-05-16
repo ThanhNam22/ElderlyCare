@@ -31,7 +31,7 @@ class _aboutState extends State<about> {
               Navigator.pop(context);
             }),
         title: Text(
-          'About',
+          'Thông tin về chúng tôi',
           style: TextStyle(
             color: Colors.white,
             fontSize: 20,
@@ -72,7 +72,7 @@ class _aboutState extends State<about> {
                     Padding(
                       padding: const EdgeInsets.all(5.0),
                       child: Text(
-                        "\t\t\t\tElderlyCare app is both side application i.e. doctor side and patient side. It's user-friendly app that allow patient to book their appoinment with their choice doctor.\n\n\t\t\t\tAt Doctor side doctor can easilt see their latest appoinment and confirm accordingly their busy schedule.",
+                        "\t\t\t\tElderlyCare là ứng dụng dành cho cả hai bên, tức là bên bác sĩ và bên bệnh nhân. Đây là ứng dụng thân thiện với người dùng cho phép bệnh nhân đặt cuộc hẹn với bác sĩ mà họ lựa chọn.\n\n\t\t\t\tTại bác sĩ, bác sĩ có thể dễ dàng xem cuộc hẹn mới nhất của họ và xác nhận lịch trình bận rộn của họ.",
                         textAlign: TextAlign.left,
                         style: TextStyle(
                           color: Colors.black54,
@@ -83,7 +83,7 @@ class _aboutState extends State<about> {
                     Padding(
                       padding: const EdgeInsets.only(top: 10.0),
                       child: Text(
-                        ' Feature',
+                        ' Tính năng',
                         style: TextStyle(
                             color: Colors.black87,
                             fontSize: 17,
@@ -96,7 +96,7 @@ class _aboutState extends State<about> {
                     Padding(
                       padding: const EdgeInsets.all(5.0),
                       child: Text(
-                        "» User-friendly interface for easy appointment booking\n» Doctor and Patient both can Add, Update, Delete appointment with ease\n» Patient and Doctor both can Upload the photo\n» Patient can rating the doctor as per treatment\n» Patient can message to doctor direclty",
+                        "» Giao diện thân thiện với người dùng để đặt lịch hẹn dễ dàng\n» Cả bác sĩ và bệnh nhân đều có thể Thêm, cập nhật, xóa cuộc hẹn một cách dễ dàng\n» Cả bệnh nhân và bác sĩ đều có thể Tải ảnh lên\n> Bệnh nhân có thể đánh giá bác sĩ theo phương pháp điều trị\n Bệnh nhân có thể nhắn tin trực tiếp cho bác sĩ",
                         textAlign: TextAlign.left,
                         style: TextStyle(
                           color: Colors.black54,
@@ -110,7 +110,7 @@ class _aboutState extends State<about> {
                     Padding(
                       padding: const EdgeInsets.all(5.0),
                       child: Text(
-                        "\t\t\t\tThe development team has used the latest technology and tools to ensure that the ElderlyCare app is secure, reliable, and easy to use. They have also incorporated  user feedback into the development process, ensuring that the app meets the needs of doctors and patient alike.",
+                        "\t\t\t\tNhóm phát triển đã sử dụng công nghệ và công cụ mới nhất để đảm bảo rằng ứng dụng ElderlyCare an toàn, đáng tin cậy và dễ sử dụng. Họ cũng đã kết hợp phản hồi của người dùng vào quá trình phát triển, đảm bảo rằng ứng dụng đáp ứng được nhu cầu của bác sĩ cũng như bệnh nhân.",
                         textAlign: TextAlign.left,
                         style: TextStyle(
                           color: Colors.black54,
@@ -122,7 +122,7 @@ class _aboutState extends State<about> {
                       child: Padding(
                         padding: const EdgeInsets.all(5.0),
                         child: Text(
-                          "Facing issues?",
+                          "Đối mặt với vấn đề?",
                           textAlign: TextAlign.left,
                           style: TextStyle(
                             color: Colors.black54,
@@ -139,7 +139,7 @@ class _aboutState extends State<about> {
                             onPressed: () {
                               launchUrl(emailLaunchUri);
                             },
-                            child: Text("SEND MAIL TO DEVELOPER"))),
+                            child: Text("GỬI MAIL CHO CHÚNG TÔI"))),
                     SizedBox(
                       height: 5,
                     )
