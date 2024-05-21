@@ -144,7 +144,7 @@ class _SearchListState extends State<SearchList> {
                                           ),
                                         ),
                                         Text(
-                                          'Chuyên khoa' + doctor['specialist'],
+                                          'Chuyên khoa ' + doctor['specialist'],
                                           style: TextStyle(
                                               fontSize: 16,
                                               color: Colors.black54),

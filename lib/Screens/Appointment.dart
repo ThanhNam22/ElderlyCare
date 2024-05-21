@@ -65,7 +65,7 @@ class _AppointmentState extends State<Appointment>
           },
         ),
         title: Text(
-          'Cuộc hện',
+          'Cuộc hẹn',
           style: TextStyle(
               color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold),
         ),

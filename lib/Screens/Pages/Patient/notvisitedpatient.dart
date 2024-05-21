@@ -76,7 +76,7 @@ class _notvisitedState extends State<notvisited> {
               Navigator.pop(context);
             }),
         title: Text(
-          'Bệnh nhân đang chờ xử lý',
+          'Chờ xử lý',
           style: TextStyle(
             color: Colors.white,
             fontSize: 20,

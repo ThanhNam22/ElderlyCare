@@ -604,7 +604,7 @@ class _Profile_pageState extends State<Profile_page> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: <Widget>[
                             Text(
-                              "Tình trạng hôn nhân",
+                              "Hôn nhân",
                               style: TextStyle(
                                   color: kPrimaryColor,
                                   fontWeight: FontWeight.w600),

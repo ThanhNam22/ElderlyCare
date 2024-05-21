@@ -251,7 +251,7 @@ class _DetailPageState extends State<DetailPage> {
                             borderRadius: BorderRadius.circular(4),
                           ),
                           child: Text(
-                            'Chuyên khoa' + widget.specialist,
+                            'Chuyên khoa ' + widget.specialist,
                             style: TextStyle(
                               color: HexColor('#FFBF11'),
                               fontSize: 11,

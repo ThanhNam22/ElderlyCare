@@ -78,7 +78,7 @@ class _MyDrawerState extends State<MyDrawer> {
                 ),
 
                 //profile
-                CustomList(Icons.person, "Thôn tin các nhân", () {
+                CustomList(Icons.person, "Thông tin", () {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => UserProfile()));
                 }),

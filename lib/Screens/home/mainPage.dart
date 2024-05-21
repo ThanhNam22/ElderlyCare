@@ -173,7 +173,7 @@ class _MainPageState extends State<MainPage> {
                     icon: _selectedIndex == 3
                         ? Typicons.user
                         : Typicons.user_outline,
-                    text: 'Thông tin cá nhân',
+                    text: 'Thông tin',
                   ),
                 ],
                 selectedIndex: _selectedIndex,

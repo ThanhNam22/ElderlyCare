@@ -75,7 +75,7 @@ class _HDCellState extends State<HDCell> {
                     height: 16,
                   ),
                   Text(
-                    'Chuyên khoa ' + widget.specialist,
+                    'Chuyên khoa\n' + widget.specialist,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 14,

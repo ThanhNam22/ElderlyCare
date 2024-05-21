@@ -149,7 +149,7 @@ class _DocDrawerState extends State<DocDrawer> {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => visited()));
                 }),
-                CustomList(Icons.timelapse, "Bệnh nhân đang chờ xử lý", () {
+                CustomList(Icons.timelapse, "Chờ xử lý", () {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => notvisited()));
                 }),

@@ -11,15 +11,15 @@ class Disease extends StatefulWidget {
 
 class _DiseaseState extends State<Disease> {
   final myImageAndCaption = [
-    ["assets/svg/b1.png", "Neuro"],
-    ["assets/svg/e1.png", "Ear"],
-    ["assets/svg/ey.png", "Eyes"],
-    ["assets/svg/e.png", "Hair"],
-    ["assets/svg/k.png", "Kidney"],
-    ["assets/svg/s.png", "Skin"],
-    ["assets/svg/t.png", "Thyroid"],
-    ["assets/svg/c.png", "Tooth"],
-    ["assets/svg/b.png", "Ortho"],
+    ["assets/svg/b1.png", "Thần kinh"],
+    ["assets/svg/e1.png", "Tai"],
+    ["assets/svg/ey.png", "Mắt"],
+    ["assets/svg/e.png", "Tóc"],
+    ["assets/svg/k.png", "Thận"],
+    ["assets/svg/s.png", "Da"],
+    ["assets/svg/t.png", "Tuyến giáp"],
+    ["assets/svg/c.png", "Răng"],
+    ["assets/svg/b.png", "Sương khớp"],
     ["assets/svg/v.png", "Covid-19"],
   ];
 

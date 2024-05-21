@@ -37,11 +37,17 @@ class Carouselslider extends StatelessWidget {
                     return Disease();
                   }));
                 }
-                if (index == 1) {
+                if (index == 4) {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (BuildContext context) {
                     return DiseaseDetail(disease: 'Covid-19');
                   }));
+                }
+                if (index == 1) {
+                  Fluttertoast.showToast(
+                      msg: "Pathology Laboratory Coming Soon...",
+                      textColor: Colors.white,
+                      backgroundColor: kPrimaryColor);
                 }
                 if (index == 2) {
                   Fluttertoast.showToast(
@@ -50,12 +56,6 @@ class Carouselslider extends StatelessWidget {
                       backgroundColor: kPrimaryColor);
                 }
                 if (index == 3) {
-                  Fluttertoast.showToast(
-                      msg: "Pathology Laboratory Coming Soon...",
-                      textColor: Colors.white,
-                      backgroundColor: kPrimaryColor);
-                }
-                if (index == 4) {
                   Fluttertoast.showToast(
                       msg: "Diet Plan Coming Soon...",
                       textColor: Colors.white,

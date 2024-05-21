@@ -250,7 +250,7 @@ class _Patient_RecentListState extends State<Patient_RecentList> {
                                                       ),
                                                       Container(
                                                         child: Text(
-                                                          "Trạng thái : Không ghe thăm",
+                                                          "Trạng thái : Không ghé thăm",
                                                           style: TextStyle(
                                                               color:
                                                                   Colors.white,

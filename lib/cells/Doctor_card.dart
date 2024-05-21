@@ -5,9 +5,9 @@ import '../constants.dart';
 class SelectCard extends StatefulWidget {
   final String name;
   final String email;
-  final String specialist;
+  final specialist;
   final String profileImage;
-  final String rating;
+  final rating;
   final String did;
 
   SelectCard({
@@ -95,7 +95,7 @@ class _SelectCardState extends State<SelectCard> {
                       height: 16,
                     ),
                     Text(
-                      'Chuyên khoa' + widget.specialist,
+                      'Chuyên khoa ' + widget.specialist,
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 14,
