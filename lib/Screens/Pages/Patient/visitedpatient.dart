@@ -4,6 +4,7 @@ import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:hospital_appointment/constants.dart';
+import 'package:hospital_appointment/widget/create_Prescription.dart';
 import 'package:intl/intl.dart';
 import '../../../componets/loadingindicator.dart';
 import '../../../models/doctor.dart';
@@ -370,10 +371,61 @@ class _visitedState extends State<visited> {
                                                                           FontWeight
                                                                               .w500),
                                                                 ),
-                                                              ) // child widget, replace with your own
-                                                              ),
+                                                              )),
                                                         ],
                                                       ),
+                                                      Positioned(
+                                                        bottom: 10,
+                                                        right: 10,
+                                                        child: ElevatedButton(
+                                                          style: ElevatedButton
+                                                              .styleFrom(
+                                                            backgroundColor:
+                                                                kPrimaryColor,
+                                                            shape:
+                                                                RoundedRectangleBorder(
+                                                              borderRadius:
+                                                                  BorderRadius
+                                                                      .circular(
+                                                                          12), // <-- Radius
+                                                            ),
+                                                          ),
+                                                          onPressed: () {
+                                                            Navigator.push(
+                                                                context,
+                                                                MaterialPageRoute(
+                                                                    builder:
+                                                                        (context) =>
+                                                                            PrescriptionInputForm(
+                                                                              doctorId: doc['did'],
+                                                                              patientId: doc['pid'],
+                                                                            )));
+                                                          },
+                                                          child: Container(
+                                                            margin:
+                                                                EdgeInsets.only(
+                                                                    left: 5,
+                                                                    right: 5),
+                                                            child: Padding(
+                                                              padding:
+                                                                  const EdgeInsets
+                                                                      .only(
+                                                                      top: 10.0,
+                                                                      bottom:
+                                                                          10),
+                                                              child: Text(
+                                                                "Kê đơn thuốc",
+                                                                style: TextStyle(
+                                                                    color: Colors
+                                                                        .white,
+                                                                    fontWeight:
+                                                                        FontWeight
+                                                                            .w600),
+                                                              ),
+                                                            ),
+                                                          ),
+                                                        ),
+                                                      )
                                                     ],
                                                   ),
                                                 ),

@@ -4,6 +4,8 @@ import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:hospital_appointment/Screens/Pages/Patient/prescription.dart';
+import 'package:hospital_appointment/widget/create_Prescription.dart';
 import 'package:intl/intl.dart';
 import '../../../componets/loadingindicator.dart';
 import '../../../constants.dart';
@@ -346,6 +348,56 @@ class _Patient_RecentListState extends State<Patient_RecentList> {
                                                               fontWeight:
                                                                   FontWeight
                                                                       .w500),
+                                                        ),
+                                                      ),
+                                                      Positioned(
+                                                        bottom: 10,
+                                                        right: 10,
+                                                        child: ElevatedButton(
+                                                          style: ElevatedButton
+                                                              .styleFrom(
+                                                            backgroundColor:
+                                                                kPrimaryColor,
+                                                            shape:
+                                                                RoundedRectangleBorder(
+                                                              borderRadius:
+                                                                  BorderRadius
+                                                                      .circular(
+                                                                          12), // <-- Radius
+                                                            ),
+                                                          ),
+                                                          onPressed: () {
+                                                            Navigator.push(
+                                                                context,
+                                                                MaterialPageRoute(
+                                                                    builder: (context) =>
+                                                                        Prescription(
+                                                                            doctorId:
+                                                                                doc['did'])));
+                                                          },
+                                                          child: Container(
+                                                            margin:
+                                                                EdgeInsets.only(
+                                                                    left: 5,
+                                                                    right: 5),
+                                                            child: Padding(
+                                                              padding:
+                                                                  const EdgeInsets
+                                                                      .only(
+                                                                      top: 10.0,
+                                                                      bottom:
+                                                                          10),
+                                                              child: Text(
+                                                                "Đơn thuốc",
+                                                                style: TextStyle(
+                                                                    color: Colors
+                                                                        .white,
+                                                                    fontWeight:
+                                                                        FontWeight
+                                                                            .w600),
+                                                              ),
+                                                            ),
+                                                          ),
                                                         ),
                                                       ),
                                                     ],

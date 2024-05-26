@@ -139,7 +139,13 @@ class _aboutState extends State<about> {
                             onPressed: () {
                               launchUrl(emailLaunchUri);
                             },
-                            child: Text("GỬI MAIL CHO CHÚNG TÔI"))),
+                            child: Text(
+                              "GỬI MAIL CHO CHÚNG TÔI",
+                              style: TextStyle(
+                                color: Colors
+                                    .white, // Change this to the desired color
+                              ),
+                            ))),
                     SizedBox(
                       height: 5,
                     )

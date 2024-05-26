@@ -137,7 +137,12 @@ class _HomePageState extends State<HomePage> {
                     alignment: Alignment.centerLeft,
                     padding: EdgeInsets.only(left: 20, bottom: 10),
                     child: Text(
-                      _message + " " + loggedInUser.name.toString() + "!",
+                      _message +
+                          " " +
+                          loggedInUser.name.toString() +
+                          " " +
+                          loggedInUser.last_name +
+                          "!",
                       style: TextStyle(
                         fontSize: 18,
                         color: kPrimaryColor,
@@ -697,20 +702,20 @@ class _HomePageState extends State<HomePage> {
   List<Category> _getCategories() {
     List<Category> categories = <Category>[];
     categories.add(Category(
-      title: 'Neuro',
+      title: 'Thần kinh',
       icon: "assets/svg/brainstorm.png",
     ));
     categories.add(Category(
       icon: "assets/svg/ear.png",
-      title: 'Ears',
+      title: 'Tai',
     ));
     categories.add(Category(
       icon: "assets/svg/eye.png",
-      title: 'Eyes',
+      title: 'Mắt',
     ));
     categories.add(Category(
-      icon: "assets/svg/hair.png",
-      title: 'Hair',
+      icon: "assets/svg/t.png",
+      title: 'Sương khớp',
     ));
     return categories;
   }

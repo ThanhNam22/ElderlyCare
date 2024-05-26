@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:hospital_appointment/Screens/laboratory.dart';
 import '../Screens/disease_page.dart';
 import '../constants.dart';
 import 'diseasedetail.dart';

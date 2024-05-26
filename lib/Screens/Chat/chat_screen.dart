@@ -9,6 +9,7 @@ import '../../models/doctor.dart';
 
 final _firestore = FirebaseFirestore.instance;
 
+// ignore: must_be_immutable
 class ChatScreen extends StatefulWidget {
   var pid;
   var p_name;
@@ -176,6 +177,7 @@ class _ChatScreenState extends State<ChatScreen> {
   }
 }
 
+// ignore: must_be_immutable
 class MessagesStream extends StatelessWidget {
   var pid;
   var did;

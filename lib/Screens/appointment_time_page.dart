@@ -278,7 +278,9 @@ class _Appoin_timeState extends State<Appoin_time> {
                               isEnabled1 = true;
                             }
                           } else
-                            Fluttertoast.showToast(msg: "Slot Full");
+                            Fluttertoast.showToast(
+                                msg:
+                                    "Bác sĩ đã có bệnh nhận vào thời gian này");
                         }),
 
                     // MORNING Button 2.........................................
@@ -296,7 +298,8 @@ class _Appoin_timeState extends State<Appoin_time> {
                             timeslot = 2;
                           }
                         } else
-                          Fluttertoast.showToast(msg: "Slot Full");
+                          Fluttertoast.showToast(
+                              msg: "Bác sĩ đã có bệnh nhận vào thời gian này");
                       },
                       child: today_app2 >= 2
                           ? time_Button(morining[1])
@@ -356,7 +359,8 @@ class _Appoin_timeState extends State<Appoin_time> {
                             isEnabled1 = true;
                           }
                         } else
-                          Fluttertoast.showToast(msg: "Slot Full");
+                          Fluttertoast.showToast(
+                              msg: "Bác sĩ đã có bệnh nhận vào thời gian này");
                       },
                       child: today_app3 >= 2
                           ? time_Button(afternoon[0])
@@ -392,7 +396,8 @@ class _Appoin_timeState extends State<Appoin_time> {
                             isEnabled1 = true;
                           }
                         } else
-                          Fluttertoast.showToast(msg: "Slot Full");
+                          Fluttertoast.showToast(
+                              msg: "Bác sĩ đã có bệnh nhận vào thời gian này");
                       },
                       child: today_app4 >= 2
                           ? time_Button(afternoon[1])
@@ -432,7 +437,8 @@ class _Appoin_timeState extends State<Appoin_time> {
                           isEnabled1 = true;
                         }
                       } else
-                        Fluttertoast.showToast(msg: "Slot Full");
+                        Fluttertoast.showToast(
+                            msg: "Bác sĩ đã có bệnh nhận vào thời gian này");
                     },
                     child: today_app5 >= 2
                         ? time_Button(afternoon[2])
@@ -490,7 +496,8 @@ class _Appoin_timeState extends State<Appoin_time> {
                             isEnabled1 = true;
                           }
                         } else
-                          Fluttertoast.showToast(msg: "Slot Full");
+                          Fluttertoast.showToast(
+                              msg: "Bác sĩ đã có bệnh nhận vào thời gian này");
                       },
                       child: today_app6 >= 2
                           ? time_Button(evening[0])
@@ -526,7 +533,8 @@ class _Appoin_timeState extends State<Appoin_time> {
                             isEnabled1 = true;
                           }
                         } else
-                          Fluttertoast.showToast(msg: "Slot Full");
+                          Fluttertoast.showToast(
+                              msg: "Bác sĩ đã có bệnh nhận vào thời gian này");
                       },
                       child: today_app7 >= 2
                           ? time_Button(evening[1])

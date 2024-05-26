@@ -37,7 +37,7 @@ class _DocRegistrationState extends State<DocRegistration> {
     'Mắt',
     'Tóc',
     'Thận',
-    'Skin',
+    'Da',
     'Tuyến giáp',
     'Răng',
     'Sương khớp',

@@ -715,7 +715,7 @@ class _DetailPageState extends State<DetailPage> {
       scheme: 'sms',
       path: widget.phone,
       queryParameters: <String, String>{
-        'body': Uri.encodeComponent('HelloDoctor'),
+        'body': Uri.encodeComponent('Xin chào bác sĩ'),
       },
     );
     return AppBar(

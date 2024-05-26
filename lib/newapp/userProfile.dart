@@ -167,7 +167,9 @@ class _UserProfileState extends State<UserProfile> {
                       ],
                     ),
                   ),
-                  accountName: Text(loggedInUser.name.toString()),
+                  accountName: Text(loggedInUser.name.toString() +
+                      " " +
+                      loggedInUser.last_name.toString()),
                   accountEmail: Text(loggedInUser.email.toString()),
                   currentAccountPicture: Container(
                     child: CircleAvatar(
