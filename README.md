@@ -102,7 +102,7 @@ lib/
 For bug reports, issues, or feature requests, please open an issue in this repository or contact the project maintainer.
 
 
-## 🖼️ Screenshots (Grid View)
+## 🖼️ Screenshots 
 
 <table>
   <tr>
@@ -118,6 +118,28 @@ For bug reports, issues, or feature requests, please open an issue in this repos
     <td><img src="https://github.com/ThanhNam22/ElderlyCare/blob/main/screenshot/8.jpg?raw=true" width="150"/></td>
     <td><img src="https://github.com/ThanhNam22/ElderlyCare/blob/main/screenshot/9.jpg?raw=true" width="150"/></td>
     <td><img src="https://github.com/ThanhNam22/ElderlyCare/blob/main/screenshot/10.jpg?raw=true" width="150"/></td>
+  </tr>
+  <tr>
+    <td><img src="https://github.com/ThanhNam22/ElderlyCare/blob/main/screenshot/11.jpg?raw=true" width="150"/></td>
+    <td><img src="https://github.com/ThanhNam22/ElderlyCare/blob/main/screenshot/12.jpg?raw=true" width="150"/></td>
+    <td><img src="https://github.com/ThanhNam22/ElderlyCare/blob/main/screenshot/13.jpg?raw=true" width="150"/></td>
+    <td><img src="https://github.com/ThanhNam22/ElderlyCare/blob/main/screenshot/14.jpg?raw=true" width="150"/></td>
+    <td><img src="https://github.com/ThanhNam22/ElderlyCare/blob/main/screenshot/15.jpg?raw=true" width="150"/></td>
+  </tr>
+    <tr>
+    <td><img src="https://github.com/ThanhNam22/ElderlyCare/blob/main/screenshot/16.jpg?raw=true" width="150"/></td>
+    <td><img src="https://github.com/ThanhNam22/ElderlyCare/blob/main/screenshot/17.jpg?raw=true" width="150"/></td>
+    <td><img src="https://github.com/ThanhNam22/ElderlyCare/blob/main/screenshot/18.jpg?raw=true" width="150"/></td>
+    <td><img src="https://github.com/ThanhNam22/ElderlyCare/blob/main/screenshot/19.jpg?raw=true" width="150"/></td>
+    <td><img src="https://github.com/ThanhNam22/ElderlyCare/blob/main/screenshot/20.jpg?raw=true" width="150"/></td>
+  </tr>
+    </tr>
+    <tr>
+    <td><img src="https://github.com/ThanhNam22/ElderlyCare/blob/main/screenshot/21.jpg?raw=true" width="150"/></td>
+    <td><img src="https://github.com/ThanhNam22/ElderlyCare/blob/main/screenshot/22.jpg?raw=true" width="150"/></td>
+    <td><img src="https://github.com/ThanhNam22/ElderlyCare/blob/main/screenshot/23.jpg?raw=true" width="150"/></td>
+    <td><img src="https://github.com/ThanhNam22/ElderlyCare/blob/main/screenshot/24.jpg?raw=true" width="150"/></td>
+    <td><img src="https://github.com/ThanhNam22/ElderlyCare/blob/main/screenshot/25.jpg?raw=true" width="150"/></td>
   </tr>
 </table>
 
