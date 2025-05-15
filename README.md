@@ -102,61 +102,23 @@ lib/
 For bug reports, issues, or feature requests, please open an issue in this repository or contact the project maintainer.
 
 
-## 🖼️ Screenshots
+## 🖼️ Screenshots (Grid View)
 
-![Screenshot 1](https://github.com/ThanhNam22/ElderlyCare/blob/main/screenshot/1.jpg?raw=true)
+<table>
+  <tr>
+    <td><img src="https://github.com/ThanhNam22/ElderlyCare/blob/main/screenshot/1.jpg?raw=true" width="150"/></td>
+    <td><img src="https://github.com/ThanhNam22/ElderlyCare/blob/main/screenshot/2.jpg?raw=true" width="150"/></td>
+    <td><img src="https://github.com/ThanhNam22/ElderlyCare/blob/main/screenshot/3.jpg?raw=true" width="150"/></td>
+    <td><img src="https://github.com/ThanhNam22/ElderlyCare/blob/main/screenshot/4.jpg?raw=true" width="150"/></td>
+    <td><img src="https://github.com/ThanhNam22/ElderlyCare/blob/main/screenshot/5.jpg?raw=true" width="150"/></td>
+  </tr>
+  <tr>
+    <td><img src="https://github.com/ThanhNam22/ElderlyCare/blob/main/screenshot/6.jpg?raw=true" width="150"/></td>
+    <td><img src="https://github.com/ThanhNam22/ElderlyCare/blob/main/screenshot/7.jpg?raw=true" width="150"/></td>
+    <td><img src="https://github.com/ThanhNam22/ElderlyCare/blob/main/screenshot/8.jpg?raw=true" width="150"/></td>
+    <td><img src="https://github.com/ThanhNam22/ElderlyCare/blob/main/screenshot/9.jpg?raw=true" width="150"/></td>
+    <td><img src="https://github.com/ThanhNam22/ElderlyCare/blob/main/screenshot/10.jpg?raw=true" width="150"/></td>
+  </tr>
+</table>
 
-![Screenshot 2](https://github.com/ThanhNam22/ElderlyCare/blob/main/screenshot/2.jpg?raw=true)
-
-![Screenshot 3](https://github.com/ThanhNam22/ElderlyCare/blob/main/screenshot/3.jpg?raw=true)
-
-![Screenshot 4](https://github.com/ThanhNam22/ElderlyCare/blob/main/screenshot/4.jpg?raw=true)
-
-![Screenshot 5](https://github.com/ThanhNam22/ElderlyCare/blob/main/screenshot/5.jpg?raw=true)
-
-![Screenshot 6](https://github.com/ThanhNam22/ElderlyCare/blob/main/screenshot/6.jpg?raw=true)
-
-![Screenshot 7](https://github.com/ThanhNam22/ElderlyCare/blob/main/screenshot/7.jpg?raw=true)
-
-![Screenshot 8](https://github.com/ThanhNam22/ElderlyCare/blob/main/screenshot/8.jpg?raw=true)
-
-![Screenshot 9](https://github.com/ThanhNam22/ElderlyCare/blob/main/screenshot/9.jpg?raw=true)
-
-![Screenshot 10](https://github.com/ThanhNam22/ElderlyCare/blob/main/screenshot/10.jpg?raw=true)
-
-![Screenshot 11](https://github.com/ThanhNam22/ElderlyCare/blob/main/screenshot/11.jpg?raw=true)
-
-![Screenshot 12](https://github.com/ThanhNam22/ElderlyCare/blob/main/screenshot/12.jpg?raw=true)
-
-![Screenshot 13](https://github.com/ThanhNam22/ElderlyCare/blob/main/screenshot/13.jpg?raw=true)
-
-![Screenshot 14](https://github.com/ThanhNam22/ElderlyCare/blob/main/screenshot/14.jpg?raw=true)
-
-![Screenshot 15](https://github.com/ThanhNam22/ElderlyCare/blob/main/screenshot/15.jpg?raw=true)
-
-![Screenshot 16](https://github.com/ThanhNam22/ElderlyCare/blob/main/screenshot/16.jpg?raw=true)
-
-![Screenshot 17](https://github.com/ThanhNam22/ElderlyCare/blob/main/screenshot/17.jpg?raw=true)
-
-![Screenshot 18](https://github.com/ThanhNam22/ElderlyCare/blob/main/screenshot/18.jpg?raw=true)
-
-![Screenshot 19](https://github.com/ThanhNam22/ElderlyCare/blob/main/screenshot/19.jpg?raw=true)
-
-![Screenshot 20](https://github.com/ThanhNam22/ElderlyCare/blob/main/screenshot/20.jpg?raw=true)
-
-![Screenshot 21](https://github.com/ThanhNam22/ElderlyCare/blob/main/screenshot/21.jpg?raw=true)
-
-![Screenshot 22](https://github.com/ThanhNam22/ElderlyCare/blob/main/screenshot/22.jpg?raw=true)
-
-![Screenshot 23](https://github.com/ThanhNam22/ElderlyCare/blob/main/screenshot/23.jpg?raw=true)
-
-![Screenshot 24](https://github.com/ThanhNam22/ElderlyCare/blob/main/screenshot/24.jpg?raw=true)
-
-![Screenshot 25](https://github.com/ThanhNam22/ElderlyCare/blob/main/screenshot/25.jpg?raw=true)
-
-![Screenshot 26](https://github.com/ThanhNam22/ElderlyCare/blob/main/screenshot/26.jpg?raw=true)
-
-![Screenshot 27](https://github.com/ThanhNam22/ElderlyCare/blob/main/screenshot/27.jpg?raw=true)
-
-![Screenshot 28](https://github.com/ThanhNam22/ElderlyCare/blob/main/screenshot/28.jpg?raw=true)
 
